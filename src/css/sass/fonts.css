@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+@font-face {
+  font-family: 'IntelClear';
+  src: url("../fonts/IntelClear_WLat_Rg.eot");
+  src: url("../fonts/IntelClear_WLat_Rg.woff") format("woff"), url("../fonts/IntelClear_WLat_Rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IntelClearBold';
+  src: url("../fonts/IntelClear_WLat_Bd.eot");
+  src: url("../fonts/IntelClear_WLat_Bd.woff") format("woff"), url("../fonts/IntelClear_WLat_Bd.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'IntelClearPro';
+  src: url("../fonts/IntelClearPro_W_Bd.eot");
+  src: url("../fonts/IntelClearPro_W_Bd.woff") format("woff"), url("../fonts/IntelClearPro_W_Bd.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'IntelClearLight';
+  src: url("../fonts/IntelClear_WLat_Lt.eot");
+  src: url("../fonts/IntelClear_WLat_Lt.woff") format("woff"), url("../fonts/IntelClear_WLat_Lt.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebasneue-regular.eot");
+  src: url("../fonts/bebasneue-regular.woff") format("woff"), url("../fonts/bebasneue-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebasneue-bold.eot");
+  src: url("../fonts/bebasneue-bold.woff") format("woff"), url("../fonts/bebasneue-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Book';
+  src: url("../fonts/bebasneue-book.eot");
+  src: url("../fonts/bebasneue-book.woff") format("woff"), url("../fonts/bebasneue-book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebasneue-light.eot");
+  src: url("../fonts/bebasneue-light.woff") format("woff"), url("../fonts/bebasneue-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebasneue-thin.eot");
+  src: url("../fonts/bebasneue-thin.woff") format("woff"), url("../fonts/bebasneue-thin.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+/*# sourceMappingURL=fonts.css.map */
