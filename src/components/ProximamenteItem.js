@@ -1,18 +1,21 @@
 // import React from "react";
-import React, { Component } from "react"
+import React, { Component } from "react";
 
-class Hero extends Component {
+
+class Proximamente extends Component {
   constructor(props) {
     super(props);
     this.state = {
       items: [],
-      isLoaded: false
+      isLoaded: false,
+      isSaved: false,
+      isLiked: false
     };
   }
 
 
   componentDidMount() {
-    fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=6f26fd536dd6192ec8a57e94141f8b20')
+    fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=6f26fd536dd6192ec8a57e94141f8b20')
       .then(res => res.json())
       .then(json => {
         this.setState({
@@ -29,23 +32,23 @@ class Hero extends Component {
         <div>Loading... </div>
       )
     } else {
+
+ 
       let base_url = 'https://image.tmdb.org/t/p/';
-      let item = items.results[0];
+      let item = items.results[this.props.index];
       let title = item.original_title;
       let overview = item.overview;
-      let coverImg = base_url + '/original/' + item.backdrop_path
-      console.log('Item: ' + items.results[0]);
-      let heroBackground = {
+      let coverImg = base_url + '/w780/' + item.backdrop_path;
+      let movieBackground = {
         backgroundImage: 'url(' + coverImg + ')',
-      };
+      }
       return (
 
-
-
-        <div style={heroBackground} aria-label={title}>
-          <h3> {title} </h3>
-          <p> {overview} </p>
-         
+        <div className="movie" style={movieBackground} index={this.props.index}>
+        <div className="details">
+        <h3> {title} </h3>
+        </div>
+        
         </div>
 
       )
@@ -56,4 +59,4 @@ class Hero extends Component {
 
 }
 
-export default Hero;
+export default Proximamente;
