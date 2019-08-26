@@ -71,6 +71,13 @@ h2 {
     line-height: normal;
     letter-spacing: normal;
     color: #ffffff;
+
+    .age-rating{
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 9.5px;
+        height: 16px;
+        padding: 0 4px;
+    }
   }
 
   .original{

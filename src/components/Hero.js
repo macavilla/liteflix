@@ -46,7 +46,7 @@ class Hero extends Component {
             </p>
             <h3 className="hero-title"> {title} </h3>
 
-            <div class="button-wrapper">
+            <div className="button-wrapper">
               <button className="play">
                 <i className="play-icon"></i>
                 <span className="hero-btn">Reproducir</span>

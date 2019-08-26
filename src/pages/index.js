@@ -13,7 +13,6 @@ export default () => (
     <Nav />
     <header className="hero-wrapper">
       <Hero />
-
     </header>
     <main className="inner-wrapper">
       <Proximamente />
