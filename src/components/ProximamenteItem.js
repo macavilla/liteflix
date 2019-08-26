@@ -53,17 +53,17 @@ class Proximamente extends Component {
             src={coverImg}
             index={this.props.index}
             alt={title + "cover"}
-          />{" "}
+          />
           <div className="details">
             <div>
-              <h3 className="movie-title"> {title} </h3>{" "}
+              <h3 className="movie-title"> {title} </h3>
               <p className="movie-details">
-                98 % Coincidencia{" "}
-                <span className="age-rating"> {isAdult ? "+16" : "ATP"} </span>{" "}
-                1 h 30 min <br /> Suspenso{" "}
-              </p>{" "}
-            </div>{" "}
-          </div>{" "}
+                98 % Coincidencia
+                <span className="age-rating"> {isAdult ? "+16" : "ATP"} </span>
+                1 h 30 min <br /> Suspenso
+              </p>
+            </div>
+          </div>
         </div>
       )
     }
