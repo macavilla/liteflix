@@ -1,8 +1,9 @@
 // FONT TYPE DEFINITIONS
 //
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap');
 
-h1.visually-hidden {
+.visually-hidden {
     clip: rect(1px 1px 1px 1px) !important;
     clip: rect(1px, 1px, 1px, 1px) !important;
     height: 1px !important;
@@ -12,6 +13,10 @@ h1.visually-hidden {
     width: 1px !important;
 }
 
+
+.bold{
+    font-weight: bold;
+}
 h2 {
     font-family: Montserrat;
     font-size: 20px;
@@ -21,9 +26,9 @@ h2 {
     line-height: normal;
     letter-spacing: normal;
     color: #ffffff;
-}
-
-.nav-item {
+  }
+  
+  .nav-item {
     font-family: Montserrat;
     font-size: 14px;
     font-weight: normal;
@@ -32,9 +37,9 @@ h2 {
     line-height: normal;
     letter-spacing: normal;
     color: #ffffff;
-}
-
-.nav-item-bold {
+  }
+  
+  .nav-item-bold {
     font-family: Montserrat;
     font-size: 14px;
     font-weight: bold;
@@ -43,15 +48,46 @@ h2 {
     line-height: normal;
     letter-spacing: normal;
     color: #ffffff;
-}
-
-.movie-btn {
+  }
+  
+  
+  .movie-title {
     font-family: Montserrat;
     font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+  
+  .movie-details {
+    font-family: Montserrat;
+    font-size: 12px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
     color: #ffffff;
+  }
+
+  .original{
+    font-family: Montserrat;
+    font-size: 24px;
+
+  
 }
+  
+  .hero-overview {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+

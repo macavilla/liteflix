@@ -25,34 +25,35 @@ class Proximamente extends Component {
   render() {
     var { isLoaded, items } = this.state;
 
-    if (!isLoaded) {
-      return (
-        <div>Loading... </div>
-      )
-    } else {
+    // if (!isLoaded) {
+    //   return (
+    //     <div>Loading... </div>
+    //   )
+    // } else {
 
 
-      let base_url = 'https://image.tmdb.org/t/p/';
-      let item = items.results[0];
-      let title = item.original_title;
-      let overview = item.overview;
-      let coverImg = base_url + '/w780/' + item.backdrop_path
-      console.log('Item: ' + items.results[0]);
+    //   let base_url = 'https://image.tmdb.org/t/p/';
+    //   let item = items.results[0];
+    //   let title = item.original_title;
+    //   let overview = item.overview;
+    //   let coverImg = base_url + '/w780/' + item.backdrop_path
       return (
 
         <section className="proximamente-wrapper">
           <h2>Proximamente</h2>
-          <ProxItem index={1} />
-          <ProxItem index={2} />
-          <ProxItem index={3} />
-          <ProxItem index={4} />
+          <div class="movies-wrapper">
+            <ProxItem index={1} />
+            <ProxItem index={2} />
+            <ProxItem index={3} />
+            <ProxItem index={4} />
+          </div>
 
 
         </section>
 
       )
 
-    }
+    // }
 
   }
 
