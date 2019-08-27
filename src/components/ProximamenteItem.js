@@ -61,7 +61,7 @@ class Proximamente extends Component {
                 <div className="circle"></div>
               </button>
               <button className="wrap-circle" aria-label="Reproducir">
-                <i className="play-icon icon"></i>
+                <i className="like-icon icon"></i>
                 <div className="circle"></div>
               </button>
             </div>
