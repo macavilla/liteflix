@@ -54,8 +54,25 @@ class Proximamente extends Component {
             index={this.props.index}
             alt={title + "cover"}
           />
-          <div className="details">
-            <div>
+          <div className="on-hover">
+            <div className="button-wrapper">
+              <button className="wrap-circle" aria-label="Mi Lista">
+                <i className="add-icon icon"></i>
+                <div className="circle"></div>
+              </button>
+              <button className="wrap-circle" aria-label="Reproducir">
+                <i className="play-icon icon"></i>
+                <div className="circle"></div>
+              </button>
+            </div>
+            <div className="button-wrapper">
+              <button className="wrap-circle" aria-label="Reproducir">
+                <i className="play-icon icon"></i>
+                <div className="circle"></div>
+              </button>
+
+            </div>
+            <div className="details">
               <h3 className="movie-title"> {title} </h3>
               <p className="movie-details">
                 98 % Coincidencia

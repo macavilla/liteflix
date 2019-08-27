@@ -1,5 +1,19 @@
 @import 'variables';
 
+// ICONOS
+
+.play-icon {
+    width: 14px;
+    height: 18px;
+    background-image: url('../img/play.png');
+
+}
+
+.add-icon {
+    width: 15.9px;
+    height: 15px;
+    background-image: url('../img/plus.png');
+}
 
 /* NAV BAR BUTTONS */
 
@@ -7,7 +21,7 @@
 /* HERO BUTTONS */
 
 button.play,
-button.my-list{
+button.my-list {
     width: 160px;
     height: 40px;
     border-radius: 20px;
@@ -20,7 +34,7 @@ button.my-list{
     position: relative;
 
     //animation
-    &:after{
+    &:after {
         content: '';
         background: black;
         border-radius: 20px;
@@ -33,47 +47,74 @@ button.my-list{
         z-index: 1;
     }
 
-    &:hover{
-        &:after{
+    &:hover {
+        &:after {
             width: 100%;
             opacity: 1;
         }
     }
 
-    *{
+    * {
         z-index: 2;
     }
 
 
 
-    .play-icon{
-        width: 14px;
-        height: 18px;
-        background-image: url('../img/play.png');
-        margin-right: 8px;
-        
-    }
 
-    .add-icon{
-        width: 15.9px;
-        height: 15px;
-        background-image: url('../img/plus.png');
-        margin-right: 8px;
+}
+
+.hero-btn {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-left: 8px;
+}
+
+
+
+
+/* Proximamente btns */
+
+
+
+
+.wrap-circle {
+    width: 30px;
+    padding: 0;
+    position: relative;
+
+    &:hover {
+        .circle {
+
+            -webkit-mask: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: 0% 0%;
+            animation: border 0.25s .1s linear 1 forwards;
+        }
+    }
+    .circle {
+        position: relative;
+        overflow: hidden;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        // background: #f00;
+        box-sizing: border-box;
+
+        .icon{
+            position: absolute;
+            top: calc(50% - 7.5px);
+            left: calc(50% - 8px);
+        }
+
         
     }
 }
 
-    .hero-btn {
-        font-family: Montserrat;
-        font-size: 16px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #ffffff;
-      }
 
-
-
-      

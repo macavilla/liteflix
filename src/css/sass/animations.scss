@@ -66,3 +66,43 @@
 		transform: rotate(360deg);
 	}
 }
+
+// CIRCLE BUTTONS ANIMATIONS
+
+@keyframes border {
+    0% {
+        -webkit-mask-position: 15px 0, 30px 0, 15px 30px, -15px 15px;
+        -webkit-mask-size: 0 0, 15px 15px, 15px 15px, 15px 15px;
+    }
+
+    25% {
+        -webkit-mask-position: 15px 0, 30px 0, 15px 30px, -15px 15px;
+        -webkit-mask-size: 15px 15px, 15px 15px, 15px 15px, 15px 15px;
+    }
+
+    50% {
+        -webkit-mask-position: 15px 0, 15px 15px, 15px 30px, -15px 15px;
+        -webkit-mask-size: 15px 15px, 15px 15px, 15px 15px, 15px 15px;
+    }
+
+    75% {
+        -webkit-mask-position: 15px 0, 15px 15px, 0 15px, -15px 15px;
+        -webkit-mask-size: 15px 15px, 15px 15px, 15px 15px, 15px 15px;
+    }
+
+    100% {
+        -webkit-mask-position: 15px 0, 15px 15px, 0 15px, 0 0;
+        -webkit-mask-size: 15px 15px, 15px 15px, 15px 15px, 15px 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
