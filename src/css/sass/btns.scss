@@ -107,14 +107,14 @@ button.my-list {
         // background: #f00;
         box-sizing: border-box;
 
-        .icon{
-            position: absolute;
-            top: calc(50% - 7.5px);
-            left: calc(50% - 8px);
-        }
-
+        
         
     }
+            .icon{
+                position: absolute;
+                top: calc(50% - 7.5px);
+                left: calc(50% - 8px);
+            }
 }
 
 
