@@ -48,11 +48,11 @@ class Hero extends Component {
 
             <div className="button-wrapper">
               <button className="play">
-                <i className="play-icon icon"></i>
+                <i className="play-icon"></i>
                 <span className="hero-btn">Reproducir</span>
               </button>
               <button className="my-list">
-                <i className="add-icon icon"></i>
+                <i className="add-icon"></i>
                 <span className="hero-btn">Mi Lista</span>
               </button>
             </div>
