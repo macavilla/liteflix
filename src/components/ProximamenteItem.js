@@ -1,5 +1,6 @@
 // import React from "react";
 import React, { Component } from "react"
+import Loader from "./Loader"
 
 class Proximamente extends Component {
   constructor(props) {
@@ -30,9 +31,7 @@ class Proximamente extends Component {
     if (!isLoaded) {
       return (
         <div className="movie-wrapper" style={{ height: 100 }}>
-          <div className="wrap">
-            <div className="loader"></div>
-          </div>
+        <Loader />
         </div>
       )
     } else {

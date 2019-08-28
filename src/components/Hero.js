@@ -1,5 +1,6 @@
 // import React from "react";
 import React, { Component } from "react"
+import Loader from "./Loader"
 
 class Hero extends Component {
   constructor(props) {
@@ -26,7 +27,12 @@ class Hero extends Component {
     var { isLoaded, items } = this.state
 
     if (!isLoaded) {
-      return <div>Loading... </div>
+      return (
+        <div className="hero-item">
+          <Loader />
+        </div>
+
+      )
     } else {
       let base_url = "https://image.tmdb.org/t/p/"
       let item = items.results[0]
@@ -36,7 +42,7 @@ class Hero extends Component {
       console.log("Hero item:");
       console.log(item);
       let heroBackground = {
-        backgroundImage:  "linear-gradient(to top, rgba(0, 0, 0, 0.2), #000000), url(" + coverImg + ")",
+        backgroundImage: "linear-gradient(to top, rgba(0, 0, 0, 0.2), #000000), url(" + coverImg + ")",
       }
       return (
         <div className="hero-item" style={heroBackground} aria-label={title}>
@@ -48,11 +54,11 @@ class Hero extends Component {
 
             <div className="button-wrapper">
               <button className="play">
-                <i className="play-icon"></i>
+                <i className="play-icon icon"></i>
                 <span className="hero-btn">Reproducir</span>
               </button>
               <button className="my-list">
-                <i className="add-icon"></i>
+                <i className="add-icon icon"></i>
                 <span className="hero-btn">Mi Lista</span>
               </button>
             </div>
