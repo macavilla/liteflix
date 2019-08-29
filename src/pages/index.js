@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
-import Proximamente from "../components/Proximamente";
+import Proximamente from "../components/ProximamenteItem";
 
 export default () => (
 
@@ -15,7 +15,17 @@ export default () => (
       <Hero />
     </header>
     <main className="inner-wrapper">
-      <Proximamente />
+      <section className="proximamente-wrapper">
+        <h2>Proximamente</h2>
+        <div className="flex-wrapper">
+          <Proximamente index={0} />
+          <Proximamente index={1} />
+          <Proximamente index={2} />
+          <Proximamente index={3} />
+        </div>
+
+
+      </section>
     </main>
 
   </div>

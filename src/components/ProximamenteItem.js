@@ -1,6 +1,7 @@
 // import React from "react";
 import React, { Component } from "react"
 import Loader from "./Loader"
+import Icon from "./Icon"
 
 class Proximamente extends Component {
   constructor(props) {
@@ -55,18 +56,23 @@ class Proximamente extends Component {
           />
           <div className="on-hover">
             <div className="button-wrapper">
+
+
+            {/* Icon component experiment */}
               <button className="wrap-circle" aria-label="Mi Lista">
-                <i className="add-icon icon"></i>
+                <Icon icon="add"></Icon>
                 <div className="circle"></div>
-              </button>
-              <button className="wrap-circle" aria-label="Reproducir">
-                <i className="like-icon icon"></i>
+                </button>
+
+
+                <button className="wrap-circle" aria-label="Reproducir">
+                <Icon icon="like"></Icon>
                 <div className="circle"></div>
-              </button>
-            </div>
-            <div className="button-wrapper">
-              <button className="wrap-circle" aria-label="Reproducir">
-                <i className="play-icon icon"></i>
+                </button>
+                </div>
+                <div className="button-wrapper">
+                <button className="wrap-circle" aria-label="Reproducir">
+                <Icon icon="play"></Icon>
                 <div className="circle"></div>
               </button>
 
