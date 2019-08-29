@@ -1,37 +1,37 @@
-// import React from "react";
+// DELETE COMPONENT
 import React, { Component } from "react";
 import ProxItem from "./ProximamenteItem"
 
-class Proximamente extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-      isLoaded: false
-    };
-  }
+// class Proximamente extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       items: [],
+//       isLoaded: false
+//     };
+//   }
 
 
 
-  render() {
-      return (
+//   render() {
+//       return (
 
-        <section className="proximamente-wrapper">
-          <h2>Proximamente</h2>
-          <div className="flex-wrapper">
-            <ProxItem index={0} />
-            <ProxItem index={1} />
-            <ProxItem index={2} />
-            <ProxItem index={3} />
-          </div>
+//         <section className="proximamente-wrapper">
+//           <h2>Proximamente</h2>
+//           <div className="flex-wrapper">
+//             <ProxItem index={0} />
+//             <ProxItem index={1} />
+//             <ProxItem index={2} />
+//             <ProxItem index={3} />
+//           </div>
 
 
-        </section>
+//         </section>
 
-      )
+//       )
 
-  }
+//   }
 
-}
+// }
 
-export default Proximamente;
+// export default Proximamente;
