@@ -40,12 +40,12 @@ class Popular extends Component {
           let base_url = "https://image.tmdb.org/t/p/"
           let item = items.results[this.props.index]
           let title = item.original_title
-          let coverImg = base_url + "/w780/" + item.backdrop_path
+          let coverImg = base_url + "/w780/" + item.poster_path
           let genreId = item.genre_ids
           let isAdult = item.adult
     
-          // console.log("Item proximamente:")
-          // console.log(item)
+          console.log("Item popular:")
+          console.log(item)
     
           return (
             <div className="movie-wrapper">
@@ -59,7 +59,6 @@ class Popular extends Component {
                 <div className="button-wrapper">
     
     
-                  {/* Icon component experiment */}
                   <button className="wrap-circle" aria-label="Mi Lista">
                     <Icon icon="add"></Icon>
                     <div className="circle"></div>
