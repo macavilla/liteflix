@@ -32,7 +32,7 @@ class Proximamente extends Component {
     if (!isLoaded) {
       return (
         <div className="movie-wrapper" style={{ height: 100 }}>
-        <Loader />
+          <Loader />
         </div>
       )
     } else {
@@ -58,20 +58,20 @@ class Proximamente extends Component {
             <div className="button-wrapper">
 
 
-            {/* Icon component experiment */}
+              {/* Icon component experiment */}
               <button className="wrap-circle" aria-label="Mi Lista">
                 <Icon icon="add"></Icon>
                 <div className="circle"></div>
-                </button>
+              </button>
 
 
-                <button className="wrap-circle" aria-label="Reproducir">
+              <button className="wrap-circle" aria-label="Reproducir">
                 <Icon icon="like"></Icon>
                 <div className="circle"></div>
-                </button>
-                </div>
-                <div className="button-wrapper">
-                <button className="wrap-circle" aria-label="Reproducir">
+              </button>
+            </div>
+            <div className="button-wrapper">
+              <button className="wrap-circle" aria-label="Reproducir">
                 <Icon icon="play"></Icon>
                 <div className="circle"></div>
               </button>
