@@ -65,11 +65,13 @@ body {
     position: relative;
 
 }
-nav,  main{
+
+nav,
+main {
     padding: 0 $margin-dk;
 }
 
-nav{
+nav {
     position: absolute;
     top: 0;
     left: 0;
@@ -94,7 +96,7 @@ nav{
             // p.original
             // .hero-title
 
-            .button-wrapper{
+            .button-wrapper {
                 display: flex;
                 flex-flow: row wrap;
                 margin: 20px 0 25px;
@@ -119,9 +121,10 @@ main.inner-wrapper {
     margin: -64px 0 0;
 }
 
-h2{
+h2 {
     margin: 0 0 20px;
 }
+
 .flex-wrapper {
     display: flex;
     flex-flow: row nowrap;
@@ -129,16 +132,18 @@ h2{
     align-items: flex-start;
     margin-bottom: 75px;
 
-    .movie-wrapper{
+    .movie-wrapper {
         width: 22.95%;
-        position: relative; /* If you want text inside of it */
+        position: relative;
+        /* If you want text inside of it */
         overflow: hidden;
 
-        .movie-cover{
+        .movie-cover {
             width: 100%;
             height: auto;
         }
-        .on-hover{
+
+        .on-hover {
             position: absolute;
             top: 110%;
             bottom: 0;
@@ -154,32 +159,77 @@ h2{
             justify-content: flex-start;
             align-items: flex-start;
 
-            .button-wrapper:nth-of-type(1){
+            .button-wrapper:nth-of-type(1) {
                 align-self: flex-end;
 
-                button:nth-of-type(2){
+                button:nth-of-type(2) {
                     margin-left: 10px;
                 }
 
             }
-            .button-wrapper:nth-of-type(2){
+
+            .button-wrapper:nth-of-type(2) {
                 align-self: center;
             }
 
         }
+
         //transition on hover
-        &:hover{
-            .on-hover{
+        &:hover {
+            .on-hover {
                 top: 0%;
                 opacity: 1;
                 z-index: 9;
                 background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
             }
-            
+
         }
-        
+
     }
 }
 
-.proximamente-wrapper, {
+.populares-wrapper {
+    h2 {
+        text-transform: uppercase;
+    }
+
+    .flex-wrapper {
+        .movie-wrapper {
+            height: 500px;
+
+            .movie-cover {
+                height: 100%;
+                width: auto;
+                position: relative;
+                left: -10%;
+            }
+
+            .on-hover {
+                top: 50%;
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: flex-end;
+                align-items: stretch;
+
+                button {}
+
+                .middle-wrapper {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    .details {
+                        width: 50%;
+                    }
+                }
+
+                .big-arrow{
+                    align-self: center;
+                }
+            }
+        }
+
+    }
 }
