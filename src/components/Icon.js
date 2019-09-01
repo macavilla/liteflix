@@ -1,3 +1,4 @@
+// To do: 
 // How this would work with SVG. 
 // More info on:
 // https://css-tricks.com/creating-svg-icon-system-react/
@@ -16,8 +17,8 @@ let Icon = props => (
   //   <path d={icons[props.icon]}></path>
   // </svg>
 
-  <i   className={props.icon +'-icon icon'}
-  ></i>
+  <i className={props.icon +'-icon icon'}>
+  </i>
 );
 
 export default Icon;
