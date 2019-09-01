@@ -3,6 +3,10 @@ import React, { Component } from "react"
 import Loader from "./Loader"
 import Icon from "./Icon"
 
+
+const API = 'https://api.themoviedb.org/3/movie/upcoming?api_key=';
+const KEY = '6f26fd536dd6192ec8a57e94141f8b20';
+
 class Proximamente extends Component {
   constructor(props) {
     super(props)
@@ -15,9 +19,7 @@ class Proximamente extends Component {
   }
 
   componentDidMount() {
-    fetch(
-      "https://api.themoviedb.org/3/movie/upcoming?api_key=6f26fd536dd6192ec8a57e94141f8b20"
-    )
+    fetch(API + KEY)
       .then(res => res.json())
       .then(json => {
         this.setState({
@@ -43,7 +45,7 @@ class Proximamente extends Component {
       let genreId = item.genre_ids
       let isAdult = item.adult
 
-      // console.log("Item proximamente:")
+      // console.log("Item popular:")
       // console.log(item)
 
       return (
@@ -58,14 +60,13 @@ class Proximamente extends Component {
             <div className="button-wrapper">
 
 
-              {/* Icon component experiment */}
               <button className="wrap-circle" aria-label="Mi Lista">
                 <Icon icon="add"></Icon>
                 <div className="circle"></div>
               </button>
 
 
-              <button className="wrap-circle" aria-label="Reproducir">
+              <button className="wrap-circle" aria-label="Me gusta">
                 <Icon icon="like"></Icon>
                 <div className="circle"></div>
               </button>
@@ -80,7 +81,7 @@ class Proximamente extends Component {
             <div className="details">
               <h3 className="movie-title"> {title} </h3>
               <p className="movie-details">
-                98 % Coincidencia
+                98% Coincidencia
                 <span className="age-rating"> {isAdult ? "+16" : "ATP"} </span>
                 1 h 30 min <br /> Suspenso
               </p>
