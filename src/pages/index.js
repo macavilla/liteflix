@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
-import Proximamente from "../components/ProximamenteItem";
+import Proximamente from "../components/Proximamente";
 import Popular from "../components/Popular";
 
 export default () => (

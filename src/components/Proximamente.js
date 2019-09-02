@@ -42,7 +42,7 @@ class Proximamente extends Component {
       let item = items.results[this.props.index]
       let title = item.original_title
       let coverImg = base_url + "/w780/" + item.backdrop_path
-      let genreId = item.genre_ids
+      // let genreId = item.genre_ids
       let isAdult = item.adult
 
       // console.log("Item popular:")

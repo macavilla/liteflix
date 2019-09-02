@@ -1,9 +1,17 @@
 #To do:
 
-1. <Populares />
-2. <Nav> 
-3. Lógica <Agregar> 
-4. localStorage: https://developer.mozilla.org/es/docs/Web/API/Window/localStorage
+- <Modal /> 
+    - Lógica <Modal /> 
+    - localStorage: https://developer.mozilla.org/es/docs/Web/API/Window/localStorage
+
+    <!-- https://programmingwithmosh.com/react/localstorage-react/ -->
+    - Estilos <Modal /> 
+
+- <Nav /> 
+    - <Agregar /> (button) 
+    - <PopOver /> (user) 
+
+- Estilos <Populares />
 
 
 

@@ -5,7 +5,7 @@ import Icon from "./Icon"
 import Arrow from "../img/arrow-big.png"
 
 
-const API = 'https://api.themoviedb.org/3/movie/popular?api_key=';
+const API_URL = 'https://api.themoviedb.org/3/movie/popular?api_key=';
 const KEY = '6f26fd536dd6192ec8a57e94141f8b20';
 
 class Popular extends Component {
@@ -20,7 +20,7 @@ class Popular extends Component {
 
 
   componentDidMount() {
-    fetch(API + KEY)
+    fetch(API_URL + KEY)
       .then(res => res.json())
       .then(json => {
         this.setState({
@@ -43,7 +43,7 @@ class Popular extends Component {
       let item = items.results[this.props.index]
       let title = item.original_title
       let coverImg = base_url + "/w780/" + item.poster_path
-      let genreId = item.genre_ids
+      // let genreId = item.genre_ids
       let isAdult = item.adult
 
       console.log("Item popular:")
