@@ -1,6 +1,8 @@
+//import Button add -> que muestra el Modal
 import React from "react";
 
 import Logo from "../img/liteflix-logo.png"
+
 
 const Nav = () => {
     return(
@@ -11,6 +13,9 @@ const Nav = () => {
 
             </div>
         </nav>
+
+
+
     )
 }
 

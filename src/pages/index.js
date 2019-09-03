@@ -3,13 +3,25 @@ import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import Proximamente from "../components/Proximamente";
 import Popular from "../components/Popular";
+import Modal from "../components/Modal/Modal";
 
-export default () => (
+
+
+modalProps = {
+  triggerText: 'Launch the Modal!'
+};
+
+
+// export default () => (
+export default class App extends Component(
+
+  
 
 
 
   <div id="home" className="wrapper">
     <h1 className="visually-hidden">Inicio de LiteFlix</h1>
+
 
     <Nav />
     <header className="hero-wrapper">
@@ -40,5 +52,6 @@ export default () => (
       </section>
     </main>
 
+    <Modal modalProps={this.modalProps} />
   </div>
 )
