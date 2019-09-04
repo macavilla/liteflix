@@ -39,7 +39,7 @@ class Nav extends Component {
             <li>
               <a href="#"><img src={Logo} alt="Liteflix Logo" /></a>
             </li>
-            <li>Inicio</li>
+            <li className="bold">Inicio</li>
             <li>Series</li>
             <li>Peliculas</li>
             <li>Agregados recientemente</li>

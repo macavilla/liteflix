@@ -100,9 +100,16 @@ nav {
                 flex-flow: row nowrap;
                 justify-content: flex-start;
                 align-items: center;
+
+                height: 84px;
                 li{
                     font-family: Montserrat;
-                    color: white
+                    color: white;
+                    margin-right: 18px;
+
+                    &:last-of-type{
+                        margin: 0;
+                    }
                 }
             }
 

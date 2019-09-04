@@ -47,36 +47,46 @@ button.modal-button {
 
     &:hover {
         span {
-            width: auto;
+            background: #ff0000;
+            border-radius: 20px;
             color: white;
-            // opacity: 1;
-            white-space: nowrap;
+            max-width: 200px;
+            opacity: 1;
+            visibility: visible;
+            letter-spacing: normal;
+            
+            padding-left: 40px;
+            padding-right: 15px;
         }
     }
-
-
-
-
+    
+    
+    
+    
     //hidden span by default
     span {
-
-        background: #ff0000;
-        color: white;
+        font-family: Montserrat;
+        font-size: 16px;
         position: absolute;
-        border-radius: 20px;
-        width: 1px;
+        max-width: 1px;
         top: 0;
         bottom: 0;
         left: 0;
-
+        right: auto;
+        opacity: 0;
+        color: rgba($color: #000000, $alpha: 0);
+        visibility: hidden;
+        
+        letter-spacing: -10px;
+   
         display: flex;
         justify-content: flex-start;
         align-items: center;
 
-        padding-left: 40px;
-        // opacity: 0;
-        color: transparent;
-        transition: all .5s ease-in-out;
+
+        
+        white-space: nowrap;
+        transition: all .5s ease-out, opacity .35s ;
     }
 
 
