@@ -2,8 +2,6 @@ import React, { Component } from "react"
 import Loader from "./Loader"
 import Icon from "./Icon"
 
-import Arrow from "../img/arrow-big.png"
-
 
 const API_URL = 'https://api.themoviedb.org/3/movie/popular?api_key=';
 const KEY = '6f26fd536dd6192ec8a57e94141f8b20';

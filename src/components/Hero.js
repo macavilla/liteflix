@@ -35,7 +35,7 @@ class Hero extends Component {
       )
     } else {
       let base_url = "https://image.tmdb.org/t/p/"
-      let item = items.results[0]
+      let item = items.results[2]
       let title = item.original_title
       let overview = item.overview
       let coverImg = base_url + "/original/" + item.backdrop_path

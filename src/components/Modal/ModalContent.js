@@ -30,7 +30,7 @@ export class ModalContent extends Component {
               className="_modal-close"
               onClick={this.props.closeModal}
             >
-              <span id="close-modal" className="_hide-visual">
+              <span id="close-modal" className="visually-hidden">
                 Close
               </span>
               <svg className="_modal-close-icon" viewBox="0 0 40 40">
