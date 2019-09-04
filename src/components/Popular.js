@@ -46,8 +46,8 @@ class Popular extends Component {
       // let genreId = item.genre_ids
       let isAdult = item.adult
 
-      console.log("Item popular:")
-      console.log(item)
+      // console.log("Item popular:")
+      // console.log(item)
 
       return (
         <div className="movie-wrapper">
