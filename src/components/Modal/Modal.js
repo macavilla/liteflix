@@ -42,9 +42,6 @@ export class Modal extends Component {
   
   render() {
 
-    console.log('====================================');
-    console.log(this.props.modalContent);
-    console.log('====================================');
     return (
       <React.Fragment>
         <ModalTrigger
