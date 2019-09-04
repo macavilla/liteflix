@@ -24,6 +24,8 @@
     bottom: 0;
     left: 0;
     right: 0;
+
+    z-index: 99;
     background-size: auto auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,6 +34,54 @@
 
 
 /* NAV BAR BUTTONS */
+
+button.modal-button {
+    background: #ff0000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    transition: all .5s ease-in-out;
+
+    cursor: pointer;
+
+    &:hover {
+        span {
+            width: auto;
+            color: white;
+            // opacity: 1;
+            white-space: nowrap;
+        }
+    }
+
+
+
+
+    //hidden span by default
+    span {
+
+        background: #ff0000;
+        color: white;
+        position: absolute;
+        border-radius: 20px;
+        width: 1px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        padding-left: 40px;
+        // opacity: 0;
+        color: transparent;
+        transition: all .5s ease-in-out;
+    }
+
+
+
+}
 
 
 /* HERO BUTTONS */
@@ -74,7 +124,7 @@ button.my-list {
         z-index: 2;
     }
 
-    .icon{
+    .icon {
         right: calc(160px - 40px);
         left: 10px;
     }
@@ -132,6 +182,6 @@ button.my-list {
 }
 
 
-.big-arrow{
+.big-arrow {
     position: relative;
 }

@@ -7,30 +7,48 @@ import Modal from "./Modal/Modal";
 
 
 class Nav extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state ={
-            triggerText: 'sarasa!'
+        this.state = {
+            triggerText: 'Agregar película'
         }
         // let modalProps = {
         //     triggerText: 'Launch the Modal!'
         //   };
     }
 
-    render(){
+    render() {
 
         return (
             <nav>
-    
-                <a href="#"><img src={Logo} alt="Liteflix Logo" /></a>
-                <div className="nav-wrapper mobile"></div>
-                <div className="nav-wrapper">
-                    <Modal modalProps={this.state.triggerText}  />
+
+                <div className="nav-wrapper mobile">
+                Mobile</div>
+                <div className="nav-wrapper desktop">
+                    <ul className="navigation-items left">
+                        <li>
+                            <a href="#"><img src={Logo} alt="Liteflix Logo" /></a>
+                        </li>
+                        <li>Inicio</li>
+                        <li>Series</li>
+                        <li>Peliculas</li>
+                        <li>Agregados recientemente</li>
+                        <li>Mi lista</li>
+                        <li>
+                            <Modal modalProps={this.state.triggerText} />
+                        </li>
+                    </ul>
+
+                    <ul className="navigation-items right">
+                    <li>Niños</li>
+                    <li>Bell</li>
+                    <li>User Dropdows</li>
+                    </ul>
                 </div>
             </nav>
-    
-    
-    
+
+
+
         )
     }
 }
