@@ -13,6 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "dependencies": {
+    "focus-trap-react": "^6.0.0",
     "gatsby": "^2.13.73",
     "gatsby-plugin-sass": "^2.1.12",
     "node-sass": "^4.12.0",

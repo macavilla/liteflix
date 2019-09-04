@@ -11,18 +11,10 @@ class ModalTrigger extends Component {
     }
     render() {
         return (
-            // <button 
-            // style={{width: '50px', height: '50px', background: 'white'}} 
-            // onClick={this.props.showModal} 
-            // className="modal-button"
-            // >
-            //     <Icon icon="add" />
-            //     <span>
-            //     {this.props.triggerText}
-            //     </span>
-            // </button>
-
-            <button onClick={this.props.showModal} className="modal-button">
+            <button 
+            ref={this.props.buttonRef}
+            onClick={this.props.showModal}
+            className="modal-button">
                 <Icon icon="add" />
                 <span>{this.props.triggerText}</span>
             </button>
