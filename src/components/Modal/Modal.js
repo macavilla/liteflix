@@ -6,28 +6,34 @@
 import React, { Component } from "react"
 import MovieTitle from "./MovieTitle";
 import ModalTrigger from "./ModalTrigger";
+import ModalContent from "./ModalContent";
 
 
 class Modal extends Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   items: [],
-    //   isLoaded: false,
-    //   isLiked: false
-    // }
+    this.state = {
+      isShown: false
+    };
   }
 
-    render() {
-      console.log('====================================');
-      console.log(this.props.modalProps);
-      console.log('====================================');
-      return(
-        <aside>
-        <p>  </p>
-        <ModalTrigger triggerText={this.props.modalProps} />
-        </aside>
-      ) 
-    }
+  render() {
+    console.log('====================================');
+    console.log(this.props);
+    console.log('====================================');
+    return (
+
+
+      <React.Fragment>
+        <ModalTrigger
+          showModal={this.showModal}
+          triggerText={this.props.modalProps}
+        />
+
+        {this.state.isShown ? <ModalContent /> : <React.Fragment />}
+
+      </React.Fragment>
+    )
   }
+}
 export default Modal
