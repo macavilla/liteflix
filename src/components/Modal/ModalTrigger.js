@@ -5,9 +5,13 @@ import Icon from "../Icon"
 
 
 class ModalTrigger extends Component {
+
+    constructor(props){
+        super(props);
+    }
     render() {
         return (
-            <button className="modal-button">
+            <button   className="modal-button">
                 <Icon icon="add" />
                 <span>
                     {this.props.triggerText}
@@ -15,6 +19,7 @@ class ModalTrigger extends Component {
             </button>);
     }
 }
+
 
 
 export default ModalTrigger
