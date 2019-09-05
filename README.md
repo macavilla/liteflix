@@ -1,22 +1,35 @@
 #To do:
 
 - <Modal /> 
-    - Lógica <Modal /> 
+    - Form y estilos <Modal />
     - localStorage: https://developer.mozilla.org/es/docs/Web/API/Window/localStorage
-
-    <!-- https://programmingwithmosh.com/react/localstorage-react/ -->
-    - Estilos <Modal /> 
+    - localStorage e imagenes?
+    - localStorage input: https://programmingwithmosh.com/react/localstorage-react/
+    - Estilos Nav dk
+    - Estilos Nav mb
 
 - <Nav /> 
     - <Agregar /> (button) 
     - <PopOver /> (user) 
 
+- <Main> ? componente que maneje qué películas renderear en main. 
+    - movieList == falsie ? <ListedMovie />
+
+
+
+- Deploy process
+
+#Done:
+
+- <Nav /> 
+    - <Agregar /> (button) 
+
+
+- <Modal /> 
+    - Renderear <Modal /> 
+
+
 - Estilos <Populares />
-
-
-
-
-
 
 
 
