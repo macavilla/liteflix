@@ -6,14 +6,27 @@ import React, { Component } from 'react';
 import ModalContent from './ModalContent';
 import ModalTrigger from './ModalTrigger';
 
+<<<<<<< HEAD
 
 export class Modal extends Component {
   constructor() {
     super();
+=======
+import React, { Component } from "react"
+import MovieTitle from "./MovieTitle";
+import ModalTrigger from "./ModalTrigger";
+import ModalContent from "./ModalContent";
+
+
+class Modal extends Component {
+  constructor(props) {
+    super(props);
+>>>>>>> 1c825a9e0ca0b34992b5488e2cfa8cc53555ea8d
     this.state = {
       isShown: false
     };
   }
+<<<<<<< HEAD
   showModal = () => {
     this.setState({ isShown: true }, () => {
       this.closeButton.focus();
@@ -67,3 +80,26 @@ export class Modal extends Component {
 }
 
 export default Modal;
+=======
+
+  render() {
+    console.log('====================================');
+    console.log(this.props);
+    console.log('====================================');
+    return (
+
+
+      <React.Fragment>
+        <ModalTrigger
+          showModal={this.showModal}
+          triggerText={this.props.modalProps}
+        />
+
+        {this.state.isShown ? <ModalContent /> : <React.Fragment />}
+
+      </React.Fragment>
+    )
+  }
+}
+export default Modal
+>>>>>>> 1c825a9e0ca0b34992b5488e2cfa8cc53555ea8d
