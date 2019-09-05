@@ -104,6 +104,7 @@ nav {
                 height: 84px;
                 li{
                     font-family: Montserrat;
+                    font-size: 14px;
                     color: white;
                     margin-right: 18px;
 
@@ -246,7 +247,7 @@ h2 {
                 height: 100%;
                 width: auto;
                 position: relative;
-                left: -10%;
+                left: -16.5%;
             }
 
             .on-hover {
@@ -288,6 +289,8 @@ aside{
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 999;
+
 
     display: flex;
     flex-flow: row nowrap;
