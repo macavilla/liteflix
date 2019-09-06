@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import FocusTrap from 'focus-trap-react';
-// import focusTrap from 'focus-trap';
+import Form from './Form';
 
 
 
@@ -37,12 +37,21 @@ export class ModalContent extends Component {
                 <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
               </svg>
             </button>
-            <div className="modal-body">{this.props.content}</div>
+            <div className="modal-body">
+              {
+                // passed from Nav in modalContent = ()
+                // this.props.content
+              }
+
+              <Form />
+
+
+            </div>
           </div>
         </aside>
       </FocusTrap>,
       document.body
-    );
+    )
   }
 }
 
