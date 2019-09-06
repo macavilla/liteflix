@@ -7,21 +7,23 @@
     - localStorage input: https://programmingwithmosh.com/react/localstorage-react/
     - Estilos Nav dk
     - Estilos Nav mb
+    - <ModalContent> 
+        - <MovieTitle>
+        - <MovieCover>
+        - <MovieGenre>
 
-- <Nav /> 
-    - <Agregar /> (button) 
+- <Nav> 
     - <PopOver /> (user) 
 
 - <Main> ? componente que maneje qué películas renderear en main. 
-    - movieList == falsie ? <ListedMovie />
+    - state: addedMovies
 
 
 
-- Deploy process
 
 #Done:
 
-- <Nav /> 
+- <Nav> 
     - <Agregar /> (button) 
 
 
@@ -31,6 +33,7 @@
 
 - Estilos <Populares />
 
+- Test deploy process
 
 
 
