@@ -6,12 +6,11 @@ export default class Form extends Component {
     state = {
       title: '',
       genre: '',
-      rememberMe: false
     };
    
     handleChange = (event) => {
       const input = event.target;
-      console.log(input.value);
+      console.log(localStorage);
       
       const value = input.value;
    
@@ -20,16 +19,16 @@ export default class Form extends Component {
    
     handleFormSubmit = () => {
         const { title, genre } = this.state;
-        // localStorage.setItem('rememberMe', rememberMe);
+
         localStorage.setItem('title', title);
         localStorage.setItem('genre', genre);
       };
    
 
       componentDidMount() {
-        const rememberMe = localStorage.getItem('rememberMe') === 'true';
-        const title = rememberMe ? localStorage.getItem('title') : '';
-        this.setState({ title, rememberMe });
+        const title = localStorage.getItem('title');
+        const genre = localStorage.getItem('genre');
+        this.setState({ title, genre });
       }
     render() {
         return (
@@ -42,16 +41,14 @@ export default class Form extends Component {
                 onChange={this.handleChange}
               />
             </label>
-            {
-              //     <label>
-              //   <input name="rememberMe" checked={this.state.rememberMe} onChange={this.handleChange} type="checkbox"/> Remember me
-              // </label>
-            }
 
-            <select name="genre" onChange={this.handleChange} >
-              <option value="value1">Value 1</option>
-              <option value="value2">Value 2</option>
-              <option value="value3">Value 3</option>
+            <select name="genre" onChange={this.handleChange}>
+              <option value="Acción">Acción</option>
+              <option value="Animación">Animación</option>
+              <option value="Aventuras">Aventuras</option>
+              <option value="Ciencia Ficción">Ciencia Ficción</option>
+              <option value="Comedia">Comedia</option>
+              <option value="Documentales">Documentales</option>
             </select>
             <button type="submit">Sign In</button>
           </form>
