@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import FocusTrap from 'focus-trap-react';
 import Form from './Form';
+import Icon from '../Icon';
 
 
 
 export class ModalContent extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
   }
   render() {
@@ -33,10 +34,14 @@ export class ModalContent extends Component {
               <span id="close-modal" className="visually-hidden">
                 Close
               </span>
-              <svg className="_modal-close-icon" viewBox="0 0 40 40">
-                <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
-              </svg>
-            </button>
+              {
+                // <svg className="_modal-close-icon" viewBox="0 0 40 40" >
+                //   <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
+                // </svg>
+
+              }
+              <Icon icon="close" /> 
+              </button>
             <div className="modal-body">
               {
                 // passed from Nav in modalContent = ()

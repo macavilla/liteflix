@@ -14,7 +14,7 @@ class ModalTrigger extends Component {
             <button 
             ref={this.props.buttonRef}
             onClick={this.props.showModal}
-            className="modal-button">
+            className="modal-trigger">
                 <Icon icon="add" />
                 <span>{this.props.triggerText}</span>
             </button>

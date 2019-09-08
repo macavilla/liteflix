@@ -4,97 +4,98 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap');
 
 .visually-hidden {
-    clip: rect(1px 1px 1px 1px) !important;
-    clip: rect(1px, 1px, 1px, 1px) !important;
-    height: 1px !important;
-    overflow: hidden !important;
-    position: absolute !important;
-    white-space: nowrap !important;
-    width: 1px !important;
+  clip: rect(1px 1px 1px 1px) !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
 }
 
 
-.bold{
-    font-weight: bold;
+.bold {
+  font-weight: bold;
 }
+
 h2 {
-    font-family: Montserrat;
-    font-size: 20px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #ffffff;
-  }
-  
-  .nav-item {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #ffffff;
-  }
-  
-  .nav-item-bold {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #ffffff;
-  }
-  
-  
-  .movie-title {
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #ffffff;
-  }
-  
-  .movie-details {
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #ffffff;
-
-    .age-rating{
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 9.5px;
-        height: 16px;
-        padding: 0 4px;
-    }
-  }
-
-  .original{
-    font-family: Montserrat;
-    font-size: 24px;
-
-  
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
 }
-  
-  .hero-overview {
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #ffffff;
-  }
 
+.nav-item {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.nav-item-bold {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+
+.movie-title {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.movie-details {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+
+  .age-rating {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 9.5px;
+    height: 16px;
+    padding: 0 4px;
+  }
+}
+
+.original {
+  font-family: Montserrat;
+  font-size: 24px;
+
+
+}
+
+.hero-overview {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}

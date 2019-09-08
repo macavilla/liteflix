@@ -17,6 +17,9 @@
 .arrow-icon {
     background-image: url('../img/arrow-big.png');
 }
+.close-icon {
+    background-image: url('../img/close-icon.png');
+}
 
 .icon {
     position: absolute;
@@ -35,7 +38,7 @@
 
 /* NAV BAR BUTTONS */
 
-button.modal-button {
+button.modal-trigger {
     background: #ff0000;
     border-radius: 50%;
     width: 40px;
@@ -155,11 +158,7 @@ button.my-list {
 
 
 
-/* Proximamente btns */
-
-
-
-
+/* MOVIE .on-hover BUTTONS */
 .wrap-circle {
     width: 30px;
     height: 30px;
@@ -194,4 +193,15 @@ button.my-list {
 
 .big-arrow {
     position: relative;
+}
+
+
+/* <Modal> BUTTONS */ 
+._modal-close{
+    width: 7px;
+    height: 7px;
+    .icon{
+        background-size: cover;
+
+    }
 }

@@ -79,36 +79,37 @@ nav {
 
     height: 84px;
 
-    .nav-wrapper{
+    .nav-wrapper {
 
-        &.mobile{
+        &.mobile {
             display: none;
 
             @media screen and (max-width: 1024px) {
                 display: block;
             }
         }
-        
-        &.desktop{
+
+        &.desktop {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
 
-            .navigation-items{
+            .navigation-items {
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: flex-start;
                 align-items: center;
 
                 height: 84px;
-                li{
+
+                li {
                     font-family: Montserrat;
                     font-size: 14px;
                     color: white;
                     margin-right: 18px;
 
-                    &:last-of-type{
+                    &:last-of-type {
                         margin: 0;
                     }
                 }
@@ -116,7 +117,7 @@ nav {
 
             @media screen and (max-width: 1024px) {
                 display: none;
-                
+
             }
         }
 
@@ -165,10 +166,6 @@ nav {
 
 main.inner-wrapper {
     margin: -64px 0 0;
-}
-
-h2 {
-    margin: 0 0 20px;
 }
 
 .flex-wrapper {
@@ -236,7 +233,7 @@ h2 {
 
 .populares-wrapper {
     h2 {
-        text-transform: uppercase;
+        margin: 0 0 20px;
     }
 
     .flex-wrapper {
@@ -271,7 +268,7 @@ h2 {
                     }
                 }
 
-                .big-arrow{
+                .big-arrow {
                     align-self: center;
                 }
             }
@@ -281,8 +278,8 @@ h2 {
 }
 
 
-
-aside{
+// <Modal />
+aside {
     background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     top: 0;
@@ -298,9 +295,46 @@ aside{
     align-items: center;
 
 
-    .modal-area{
+    .modal-area {
         background: white;
         border-radius: 10px;
         padding: 30px 35px 27px;
+        position: relative;
+
+        ._modal-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            // svg{
+            //     fill: #9b9b9b;
+            // }
+        }
+
+        form {
+
+            // >fieldsets
+            .drag-and-drop {
+                border-radius: 10px;
+                border: dashed 1px #9b9b9b;
+
+                min-height: 100px;
+
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .movie-info {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                >.field{
+                    width: 50%;
+                }
+            }
+        }
     }
 }
