@@ -3,13 +3,14 @@
 // https://stackoverflow.com/questions/19183180/how-to-save-an-image-to-localstorage-and-display-it-on-the-next-page
 
 import React, { Component } from 'react';
+import Icon from "../Icon"
 
 
 
-export default class Form extends Component {
+export default class DragAndDrop extends Component {
     state = {
-        isLoading: false,
-        progress: 0,
+        isLoading: true,
+        progress: 20,
         error: false,
         success: false,
         file: ''
@@ -39,70 +40,58 @@ export default class Form extends Component {
 
     render() {
 
-        // while (this.state.isLoading) {
+        if (this.state.isLoading) {
 
-        //     return (
+            return (
+                <fieldset id="drag-and-drop" className={this.state.error ? ' error ' : this.state.success ? ' success ' : ' loading '}>
 
-        //         <fieldset className={"drag-and-drop" + this.state.error ? 'error' : this.state.success ? 'success' : ''}>
-        //             <p className="message">
-        //                 {this.state.error ? 'Error! No se pudo cargar la película'
-        //                     : this.state.success ? '100% Cargado' :
-        //                         'Cargando ' + this.state.progress + '%'
-        //                 }
-        //             </p>
-        //             <progress max="100" value={this.state.error ? 100
-        //                 : this.state.success ? 100 : this.state.progress
-        //             }
-        //             ></progress>
-        //         </fieldset>
-        //     )
+                    <p className="message">
+                        {
+                            this.state.error ? 'Error! No se pudo cargar la película' :
+                                this.state.success ? '100% Cargado' :
+                                    this.state.isLoading ? 'Cargando ' + this.state.progress : ''
+                        }
+                    </p>
+                    <progress className={!this.state.isLoading ? 'visually-hidden' : ''} max="100" value={
+                        this.state.error ? 100 :
+                            this.state.success ? 100 :
+                                this.state.progress
+                    }
+                    ></progress>
 
-        // }
-        // return (
+                    <button className={this.state.success ? 'visually-hidden' : ''}>
+                        {
+                            this.state.error ? 'REINTENTAR' :
+                                this.state.isLoading ? 'CANCELAR' : ''
+                        }
+                    </button>
+                </fieldset>
+            )
 
-        //     <fieldset className="drag-and-drop">
+        } else {
+            return (
+                <div id="drag-and-drop" className="fieldset">
+                    <legend className="visually-hidden"><span>Agregar archivo o arrastrarlo y soltarlo aquí</span></legend>
+                    <div className="field">
+                        <label for="file" className={this.state.isLoading || this.state.error || this.state.success ? 'visually-hidden' : 'label-file'}>
+                            <Icon icon="clip"></Icon>
+                            <span>
+                                <span className="blue">Agregar archivo </span>o arrastrarlo y soltarlo aquí
+                                    </span>
+                            <input
+                                type="file"
+                                name="file"
+                                value={this.state.file}
+                                id="file"
+                                onChange={this.imageUpload}
+                                className="visually-hidden"
+                            />
+                        </label>
+                    </div>
+                </div>
+            )
 
-
-
-
-        //         <legend className="visually-hidden"><span>Agregar archivo o arrastrarlo y soltarlo aquí</span></legend>
-        //         <input
-        //             type="file"
-        //             name="file"
-        //             value={this.state.file}
-        //             id="file"
-        //             onChange={this.imageUpload}
-        //         />
-
-        //         <p> {this.state.isLoading ? 'isLoading' : ''} </p>
-        //     </fieldset>
-
-        // )
-
-        return (
-
-            <fieldset className={"drag-and-drop" + this.state.error ? 'error' : this.state.success ? 'success' : this.state.isLoading ? 'loading' : ''}>
-                <legend className="visually-hidden"><span>Agregar archivo o arrastrarlo y soltarlo aquí</span></legend>
-                <input
-                    type="file"
-                    name="file"
-                    value={this.state.file}
-                    id="file"
-                    onChange={this.imageUpload}
-                    className={!this.state.isLoading ? '' : 'visually-hidden'}
-                />
-
-                <p className="message">
-                    {this.state.error ? 'Error! No se pudo cargar la película'
-                        : this.state.success ? '100% Cargado'
-                            : ''}
-                </p>
-                <progress max="100" value={this.state.error ? 100
-                    : this.state.success ? 100 : this.state.progress
-                }
-                ></progress>
-            </fieldset>
-        )
+        }
     }
 }
 

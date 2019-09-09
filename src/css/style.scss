@@ -13,31 +13,31 @@
 1.0 Reset
 --------------------------------------------------------------*/
 
-@import 'sass/reset';
+@import "sass/reset";
 
 /*--------------------------------------------------------------
 2.0 Fuentes
 --------------------------------------------------------------*/
 
-@import 'sass/fonts';
+@import "sass/fonts";
 
 /*--------------------------------------------------------------
 3.0 variables
 --------------------------------------------------------------*/
 
-@import 'sass/variables';
+@import "sass/variables";
 
 /*--------------------------------------------------------------
 4.0 btns
 --------------------------------------------------------------*/
 
-@import 'sass/btns';
+@import "sass/btns";
 
 /*--------------------------------------------------------------
 5.0 animations
 --------------------------------------------------------------*/
 
-@import 'sass/animations';
+@import "sass/animations";
 
 /*--------------------------------------------------------------
 6.0 General
@@ -63,7 +63,6 @@ body {
     /* max-width = min-width de mediaqueries para XL screens  */
     max-width: 1440px;
     position: relative;
-
 }
 
 nav,
@@ -80,7 +79,6 @@ nav {
     height: 84px;
 
     .nav-wrapper {
-
         &.mobile {
             display: none;
 
@@ -117,17 +115,12 @@ nav {
 
             @media screen and (max-width: 1024px) {
                 display: none;
-
             }
         }
-
-
     }
 }
 
 .hero-wrapper {
-
-
     .hero-item {
         padding: 0 $margin-dk;
         height: 760px;
@@ -149,7 +142,6 @@ nav {
                 margin: 20px 0 25px;
             }
         }
-
     }
 
     .hero-title {
@@ -158,11 +150,7 @@ nav {
         font-weight: bold;
         line-height: 0.82;
     }
-
-
 }
-
-
 
 main.inner-wrapper {
     margin: -64px 0 0;
@@ -193,9 +181,8 @@ main.inner-wrapper {
             left: 0;
             right: 0;
             opacity: 0;
-            transition: all .5s ease;
+            transition: all 0.5s ease;
             padding: 10px;
-
 
             display: flex;
             flex-flow: column nowrap;
@@ -208,13 +195,11 @@ main.inner-wrapper {
                 button:nth-of-type(2) {
                     margin-left: 10px;
                 }
-
             }
 
             .button-wrapper:nth-of-type(2) {
                 align-self: center;
             }
-
         }
 
         //transition on hover
@@ -223,11 +208,11 @@ main.inner-wrapper {
                 top: 0%;
                 opacity: 1;
                 z-index: 9;
-                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+                background-image: linear-gradient(to bottom,
+                        rgba(0, 0, 0, 0),
+                        rgba(0, 0, 0, 0.9));
             }
-
         }
-
     }
 }
 
@@ -273,10 +258,8 @@ main.inner-wrapper {
                 }
             }
         }
-
     }
 }
-
 
 // <Modal />
 aside {
@@ -288,18 +271,18 @@ aside {
     right: 0;
     z-index: 999;
 
-
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-
 
     .modal-area {
         background: white;
         border-radius: 10px;
         padding: 30px 35px 27px;
         position: relative;
+
+        min-width: calc(1440px / 100 * 50.6944);
 
         ._modal-close {
             position: absolute;
@@ -313,7 +296,7 @@ aside {
         form {
 
             // >fieldsets
-            .drag-and-drop {
+            #drag-and-drop {
                 border-radius: 10px;
                 border: dashed 1px #9b9b9b;
 
@@ -323,6 +306,68 @@ aside {
                 flex-flow: row nowrap;
                 justify-content: center;
                 align-items: center;
+
+
+                &.loading,
+                &.success,
+                &.error {
+                    border-radius: 10px;
+                    border: none;
+                    background-color: #f3f3f3;
+
+
+                    padding: 15px 30px;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+
+                    p {
+                        color: #000000;
+                        font-family: Montserrat;
+                        font-size: 12px;
+
+                        align-self: flex-start;
+                        margin-bottom: 10px;
+                    }
+
+                    progress {
+                        /* Reset the default appearance */
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 100%;
+
+                        &::-webkit-progress-bar{
+                            height: 20px;
+                            border-radius: 10px;
+                            background-color: #dedede;
+                        }
+
+                        &::-webkit-progress-value{
+                            border-radius: 10px;
+                            background-color: #7ed321;
+                        }
+                    }
+                }
+
+                .label-file {
+                    position: relative;
+                    padding-left: 30px;
+                    cursor: pointer;
+
+                    span {
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        color: #9b9b9b;
+
+                        .blue {
+                            font-weight: bold;
+                            color: #0076ff;
+                        }
+                    }
+
+                    .icon {
+                        right: calc(100% - 30px);
+                    }
+                }
             }
 
             .movie-info {
@@ -331,7 +376,7 @@ aside {
                 justify-content: space-between;
                 align-items: flex-start;
 
-                >.field{
+                >.field {
                     width: 50%;
                 }
             }
