@@ -7,10 +7,10 @@ import Modal from "./Modal/Modal";
 
 
 class Nav extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-  }
+  // }
 
 
   modalProps = {

@@ -1,6 +1,8 @@
+// listen to localStorage?
+//https://stackoverflow.com/questions/43313372/how-to-listen-to-localstorage-in-react-js
+
 import React, { Component } from "react";
 
-import Hero from "./Hero";
 
 import Proximamente from "./Proximamente";
 
