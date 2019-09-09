@@ -9,7 +9,7 @@ import Icon from "../Icon"
 
 export default class DragAndDrop extends Component {
     state = {
-        isLoading: true,
+        isLoading: false,
         progress: 20,
         error: false,
         success: false,
@@ -43,13 +43,12 @@ export default class DragAndDrop extends Component {
         if (this.state.isLoading) {
 
             return (
-                <fieldset id="drag-and-drop" className={this.state.error ? ' error ' : this.state.success ? ' success ' : ' loading '}>
-
+                <div id="drag-and-drop" className={this.state.error ? ' error ' : this.state.success ? ' success ' : ' loading '}>
                     <p className="message">
                         {
                             this.state.error ? 'Error! No se pudo cargar la película' :
                                 this.state.success ? '100% Cargado' :
-                                    this.state.isLoading ? 'Cargando ' + this.state.progress : ''
+                                    this.state.isLoading ? 'Cargando ' + this.state.progress + '%': ''
                         }
                     </p>
                     <progress className={!this.state.isLoading ? 'visually-hidden' : ''} max="100" value={
@@ -59,19 +58,19 @@ export default class DragAndDrop extends Component {
                     }
                     ></progress>
 
-                    <button className={this.state.success ? 'visually-hidden' : ''}>
-                        {
+                    <button id="image-upload-btn" className={this.state.success ? 'visually-hidden' : ''}>
+                        
+                    {
                             this.state.error ? 'REINTENTAR' :
                                 this.state.isLoading ? 'CANCELAR' : ''
                         }
                     </button>
-                </fieldset>
+                </div>
             )
 
         } else {
             return (
                 <div id="drag-and-drop" className="fieldset">
-                    <legend className="visually-hidden"><span>Agregar archivo o arrastrarlo y soltarlo aquí</span></legend>
                     <div className="field">
                         <label for="file" className={this.state.isLoading || this.state.error || this.state.success ? 'visually-hidden' : 'label-file'}>
                             <Icon icon="clip"></Icon>

@@ -308,6 +308,8 @@ aside {
                 align-items: center;
 
 
+
+
                 &.loading,
                 &.success,
                 &.error {
@@ -318,32 +320,14 @@ aside {
 
                     padding: 15px 30px;
                     flex-flow: column nowrap;
-                    justify-content: space-between;
+                    justify-content: flex-start;
 
-                    p {
-                        color: #000000;
-                        font-family: Montserrat;
-                        font-size: 12px;
+                }
 
-                        align-self: flex-start;
-                        margin-bottom: 10px;
-                    }
-
-                    progress {
-                        /* Reset the default appearance */
-                        -webkit-appearance: none;
-                        appearance: none;
-                        width: 100%;
-
-                        &::-webkit-progress-bar{
-                            height: 20px;
-                            border-radius: 10px;
-                            background-color: #dedede;
-                        }
-
-                        &::-webkit-progress-value{
-                            border-radius: 10px;
-                            background-color: #7ed321;
+                &.error{
+                    progress{
+                        &::-webkit-progress-value {
+                            background-color: #ff0000;
                         }
                     }
                 }
@@ -368,6 +352,36 @@ aside {
                         right: calc(100% - 30px);
                     }
                 }
+
+
+
+                p {
+                    color: #000000;
+                    font-family: Montserrat;
+                    font-size: 12px;
+
+                    margin-bottom: 10px;
+                    align-self: flex-start;
+                }
+
+                progress {
+                    /* Reset the default appearance */
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 100%;
+
+                    &::-webkit-progress-bar {
+                        height: 20px;
+                        border-radius: 10px;
+                        background-color: #dedede;
+                    }
+
+                    &::-webkit-progress-value {
+                        border-radius: 10px;
+                        background-color: #7ed321;
+                    }
+                }
+
             }
 
             .movie-info {
