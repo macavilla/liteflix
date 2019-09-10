@@ -39,20 +39,22 @@ export default class Form extends Component {
       <form onSubmit={this.handleFormSubmit}>
 
         <DragAndDrop></DragAndDrop>
-        <fieldset className="movie-info ">
-          <legend className="visually-hidden"><span>Información sobre la película</span></legend>
-          <div className="field">
-            <label>
+        <div id="movie-info" className="fieldset">
+          <div className="field title">
+            <input
+            type="text"
+              name="title"
+              id="title"
+              placeholder="NOMBRE DE LA PELICULA"
+              onChange={this.handleChange}
+
+            />
+{        
+            <label htmlFor="title">
               <span className="label-text">NOMBRE DE LA PELICULA</span>
-              <input
-                name="title"
-                onChange={this.handleChange}
-                // {
-                //   //  value={this.state.title}
-                // }
-              />
             </label>
-          </div>
+        
+}            </div>
 
           <div className="field">
             <label>
@@ -67,7 +69,7 @@ export default class Form extends Component {
               </select>
             </label>
           </div>
-        </fieldset>
+        </div>
         <button type="submit">Sign In</button>
       </form>
     )
