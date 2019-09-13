@@ -47,21 +47,22 @@ export default class DragAndDrop extends Component {
                         {
                             this.state.error ? 'Error! No se pudo cargar la película' :
                                 this.state.success ? '100% Cargado' :
-                                    this.state.isLoading ? 'Cargando ' + this.state.progress + '%': ''
+                                    this.state.isLoading ? 'Cargando ' + this.state.progress + '%' : ''
                         }
                     </p>
                     <progress className={!this.state.isLoading ? 'visually-hidden' : ''} max="100" value={
                         this.state.error ? 100 :
                             this.state.success ? 100 :
                                 this.state.progress
-                    }
-                    ></progress>
+                    }>
+                    </progress>
 
                     <button id="image-upload-btn" className={this.state.success ? 'visually-hidden' : ''}>
-                        
-                    {
+
+                        {
                             this.state.error ? 'REINTENTAR' :
-                                this.state.isLoading ? 'CANCELAR' : ''
+                                this.state.success ? 'LISTO' :
+                                    this.state.isLoading ? 'CANCELAR' : ''
                         }
                     </button>
                 </div>

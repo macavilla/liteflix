@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
 import DragAndDrop from './DragAndDrop';
+import Categories from './Categories';
 
 import Select from 'react-select';
 
-const scaryAnimals = [
-  { label: "Animación", value: 1 },
-  { label: "Aventuras", value: 2 },
-  { label: "Ciencia Ficción", value: 3 },
-  { label: "Comedia", value: 4 },
-  { label: "Documentales", value: 5 }
-];
 
 
 export default class Form extends Component {
   state = {
     file: null,
     title: '',
-    genre: '',
+    category: '',
   };
 
   handleChange = (event) => {
@@ -28,25 +22,22 @@ export default class Form extends Component {
     this.setState({ [input.name]: value });
   };
 
-  handleSelect = selectedOption => {
-    this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
-  };
+
 
   handleFormSubmit = () => {
-    const { title, genre, file } = this.state;
+    const { title, category, file } = this.state;
 
     localStorage.setItem('file', file);
     localStorage.setItem('title', title);
-    localStorage.setItem('genre', genre);
+    localStorage.setItem('category', category);
   };
 
 
   componentDidMount() {
     const file = localStorage.getItem('file');
     const title = localStorage.getItem('title');
-    const genre = localStorage.getItem('genre');
-    this.setState({ file, title, genre });
+    const category = localStorage.getItem('category');
+    this.setState({ file, title, category });
   }
   render() {
     return (
@@ -70,24 +61,12 @@ export default class Form extends Component {
 
           </div>
 
-          <div className="field">
-          <Select options={scaryAnimals} />
-          
-          {
-              // <label>
-              //     <span className="label-text">CATEGORIA</span>
-              //     <select name="genre" onChange={this.handleChange}>
-              //       <option value="Acción">Acción</option>
-              //       <option value="Animación">Animación</option>
-              //       <option value="Aventuras">Aventuras</option>
-              //       <option value="Ciencia Ficción">Ciencia Ficción</option>
-              //       <option value="Comedia">Comedia</option>
-              //       <option value="Documentales">Documentales</option>
-              //     </select>
-              //   </label>
+          <div className="field category">
 
-            }          
-            </div>
+            <Categories />
+
+
+          </div>
         </div>
         <button type="submit">Sign In</button>
       </form>
