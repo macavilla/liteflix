@@ -3,14 +3,19 @@ import React, { Component } from "react";
 
 import Logo from "../img/liteflix-logo.png"
 import Modal from "./Modal/Modal";
+import Icon from "./Icon"
 
 
 
 class Nav extends Component {
-  // constructor(props) {
-  //   super(props);
+  constructor(props) {
+    super(props);
 
-  // }
+    this.state = {isToggleOn: true};
+
+    // Este enlace es necesario para hacer que `this` funcione en el callback
+    this.handleMenuTrigger = this.handleMenuTrigger.bind(this);
+  }
 
 
   modalProps = {
@@ -27,13 +32,29 @@ class Nav extends Component {
     </React.Fragment>
   );
 
+  handleMenuTrigger() {
+    console.log('CLICK');
+    
+    this.setState(state => ({
+      isToggleOn: !state.isToggleOn
+    }));
+  }
+
   render() {
 
     return (
       <nav>
 
         <div className="nav-wrapper mobile">
-          Mobile</div>
+          <button id="menu-trigger" className="" onClick={this.handleMenuTrigger} aria-label="Open the navigation menu">
+            <Icon icon="menu" aria-hidden="true"/>
+          </button>
+
+          <div className={this.state.isToggleOn ? 'nav-content open' : 'nav-content closed'}>
+            <div className="user"></div>
+          </div>
+
+        </div>
         <div className="nav-wrapper desktop">
           <ul className="navigation-items left">
             <li>
