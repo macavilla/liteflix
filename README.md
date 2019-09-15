@@ -57,29 +57,31 @@ Structure
 
 ```
 index.js
-│   README.md
-│   file001.txt    
+│   
+│       
 │
 └───Nav
-│   │   file011.txt
-│   │   file012.txt
 │   │
-│   └───Button
-│       │   Icon
+│   │
+│   │
+│   └───Modal
+│       └───ModalTrigger
+│       └───ModalContent
+│           └───Form
+│               │   DragAndDrop
+│               │   Categories
 │   
 └───Hero
 │   │   Loader
-│   │   
-│   │
-│   └───subfolder
 │   
-└───ProximamenteItem
+│
+│   
+└───Main
 │   │   Loader
 │   │   
 │   │
-│   └───Button
-│       │   Icon
-│       │   
+│   └───Popular
+│   └───Proximamente
 │       │   ...
 │   
 ```
