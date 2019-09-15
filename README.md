@@ -1,12 +1,8 @@
 #To do:
 
 - <Modal /> 
-    - Form y estilos <Modal />
-    - localStorage: https://developer.mozilla.org/es/docs/Web/API/Window/localStorage
     - localStorage e imagenes?
-    - localStorage input: https://programmingwithmosh.com/react/localstorage-react/
-    - Estilos Nav dk
-    - Estilos Nav mb
+    - if Form incomplete, <button classNAme="submit" submit disabled>
     - <ModalContent> 
         - <MovieTitle>
         - <MovieCover>
@@ -14,6 +10,8 @@
 
 - <Nav> 
     - <PopOver /> (user) 
+    - Estilos Nav dk
+    - Estilos Nav mb
 
 - <Main> ? componente que maneje qué películas renderear en main. 
     - state: addedMovies
@@ -29,6 +27,9 @@
 
 - <Modal /> 
     - Renderear <Modal /> 
+    - Form y estilos <Modal />
+    - localStorage: https://developer.mozilla.org/es/docs/Web/API/Window/localStorage
+    - localStorage input: https://programmingwithmosh.com/react/localstorage-react/
 
 
 - Estilos <Populares />
