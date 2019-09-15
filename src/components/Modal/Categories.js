@@ -26,14 +26,16 @@ export default class Categories extends Component {
 
 
   handleSelect = selectedOption => {
+    const category = selectedOption.value;
     this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
+    console.log(`Option selected:`, category);
+    localStorage.setItem('category', category);
   };
 
   render() {
 
     return (
-      <Select className="select-category" classNamePrefix="category" openMenuOnFocus={true}
+      <Select onChange={this.handleSelect} className="select-category" classNamePrefix="category" openMenuOnFocus={true}
         placeholder=""
         isSearchable={false}
         components={{

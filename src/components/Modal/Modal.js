@@ -24,6 +24,7 @@ export class Modal extends Component {
     this.setState({ isShown: false });
     this.TriggerButton.focus();
     this.toggleScrollLock();
+    localStorage.clear()
   };
   onKeyDown = event => {
     if (event.keyCode === 27) {

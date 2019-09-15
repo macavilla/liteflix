@@ -17,9 +17,11 @@ export default () => (
 
 
     <Nav />
-    <header className="hero-wrapper">
-      <Hero />
-    </header>
+    <Hero />
+    {
+    // <header className="hero-wrapper">
+    // </header>
+  }
     <Main />
 
   </div>

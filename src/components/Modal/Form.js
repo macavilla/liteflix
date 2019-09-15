@@ -2,42 +2,52 @@ import React, { Component } from 'react';
 import DragAndDrop from './DragAndDrop';
 import Categories from './Categories';
 
-import Select from 'react-select';
-
 
 
 export default class Form extends Component {
-  state = {
-    file: null,
-    title: '',
-    category: '',
-  };
+  constructor(props){
+    super(props);
+    this.state = {
+      cover: '',
+      title: '',
+      category: '',
+      isButtonDisabled: true
+    };
+  }
 
   handleChange = (event) => {
     const input = event.target;
-    // console.log(localStorage);
-
     const value = input.value;
 
     this.setState({ [input.name]: value });
+
+    localStorage.setItem('title', this.state.title);
+
   };
 
 
 
   handleFormSubmit = () => {
-    const { title, category, file } = this.state;
+    const { title } = this.state;
 
-    localStorage.setItem('file', file);
     localStorage.setItem('title', title);
-    localStorage.setItem('category', category);
   };
 
 
   componentDidMount() {
-    const file = localStorage.getItem('file');
-    const title = localStorage.getItem('title');
-    const category = localStorage.getItem('category');
-    this.setState({ file, title, category });
+
+    // this.setState({
+    //   cover: localStorage.getItem(cover),
+    //   title: localStorage.getItem(title),
+    //   category: localStorage.getItem(category)
+    // });
+
+    if (this.state.cover && this.state.title && this.state.category) {
+      console.log('====================================');
+      console.log(' completo');
+      console.log('====================================');
+    }
+
   }
   render() {
     return (
@@ -50,25 +60,30 @@ export default class Form extends Component {
               type="text"
               name="title"
               id="title"
+              value={this.state.title}
               placeholder="NOMBRE DE LA PELICULA"
               onChange={this.handleChange}
 
             />
 
             <label htmlFor="title">
-              <span className="label-text">NOMBRE DE LA PELICULA</span>
+              <span className="label-text">
+              NOMBRE DE LA PELICULA
+              </span>
             </label>
 
           </div>
 
           <div className="field category">
 
-            <Categories />
+            <Categories value={this.state.category} />
 
 
           </div>
         </div>
-        <button type="submit">Sign In</button>
+        <div className="button-wrapper">
+          <button type="submit">Sign In</button>
+        </div>
       </form>
     )
   }
