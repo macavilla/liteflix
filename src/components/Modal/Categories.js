@@ -7,7 +7,8 @@ const categories = [
   { label: "Aventuras", value: "Aventuras" },
   { label: "Ciencia Ficción", value: "Ciencia Ficción" },
   { label: "Comedia", value: "Comedia" },
-  { label: "Documentales", value: "Documentales" }
+  { label: "Documentales", value: "Documentales" },
+  { label: "Suspenso", value: "Suspenso" }
 ];
 
 
