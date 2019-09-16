@@ -1,5 +1,4 @@
-//Modal component
-//based on
+//Modal component from tutorial:
 //https://programmingwithmosh.com/javascript/create-modal-using-react/
 
 import React, { Component } from 'react';
@@ -11,7 +10,8 @@ export class Modal extends Component {
   constructor() {
     super();
     this.state = {
-      isShown: false
+      isShown: false,
+      formIsShown: true,
     };
   }
   showModal = () => {
@@ -40,7 +40,7 @@ export class Modal extends Component {
     document.querySelector('html').classList.toggle('scroll-lock');
   };
 
-  
+
   render() {
 
     return (
@@ -60,8 +60,8 @@ export class Modal extends Component {
             onClickOutside={this.onClickOutside}
           />
         ) : (
-          <React.Fragment />
-        )}
+            <React.Fragment />
+          )}
       </React.Fragment>
     );
   }

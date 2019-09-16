@@ -8,7 +8,7 @@ import Categories from './Categories';
 
 
 export default class Form extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       cover: '',
@@ -24,8 +24,17 @@ export default class Form extends Component {
 
     this.setState({ [input.name]: value });
 
-    localStorage.setItem('title', this.state.title);
+    if (value.length > 0) {
 
+      this.setState({
+        isButtonDisabled: false
+      })
+
+    } else {
+      this.setState({ isButtonDisabled: true })
+    }
+
+    localStorage.setItem('title', this.state.title);
   };
 
 
@@ -57,7 +66,7 @@ export default class Form extends Component {
 
             <label htmlFor="title">
               <span className="label-text">
-              NOMBRE DE LA PELICULA
+                NOMBRE DE LA PELICULA
               </span>
             </label>
 
@@ -71,7 +80,13 @@ export default class Form extends Component {
           </div>
         </div>
         <div className="button-wrapper">
-          <button type="submit">Sign In</button>
+          <button
+            id="movie-upload-btn"
+            type="submit"
+            disabled={this.state.isButtonDisabled ? 'disabled' : undefined}
+          >
+            <span>Subir película</span>
+          </button>
         </div>
       </form>
     )

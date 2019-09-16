@@ -17,11 +17,13 @@
 .arrow-icon {
     background-image: url('../img/arrow-big.png');
 }
+
 .close-icon {
     background-image: url('../img/close-icon.png');
 }
+
 .clip-icon {
-    background-image: url('../img/clip.png');
+    background-image: url('../img/clip-test.png');
 }
 
 .icon {
@@ -60,15 +62,15 @@ button.modal-trigger {
             opacity: 1;
             visibility: visible;
             letter-spacing: normal;
-            
+
             padding-left: 40px;
             padding-right: 15px;
         }
     }
-    
-    
-    
-    
+
+
+
+
     //hidden span by default
     span {
         font-family: Montserrat;
@@ -82,17 +84,17 @@ button.modal-trigger {
         opacity: 0;
         color: rgba($color: #000000, $alpha: 0);
         visibility: hidden;
-        
+
         letter-spacing: -10px;
-   
+
         display: flex;
         justify-content: flex-start;
         align-items: center;
 
 
-        
+
         white-space: nowrap;
-        transition: all .5s ease-out, opacity .35s ;
+        transition: all .5s ease-out, opacity .35s;
     }
 
 
@@ -199,25 +201,58 @@ button.my-list {
 }
 
 
-/* <Modal> BUTTONS */ 
-._modal-close{
+/* <Modal> BUTTONS */
+._modal-close {
     width: 7px;
     height: 7px;
-    .icon{
+
+    .icon {
         background-size: cover;
 
     }
 }
 
-    /*Drag and drop*/
+/*<Form> buttons*/
 
-    #image-upload-btn{
+#movie-upload-btn{
+    //when disable attr is removed 
+    background-color: black;
+    border-radius: 35px;
+    height: 70px;
+    span{
+        color: white;
         font-family: Montserrat;
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 16px;
+        font-weight: normal;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #4a4a4a;
     }
+
+
+    &:focus{
+
+    }
+    &:disabled{
+        background-color: #dedede;
+    
+        span{
+            color: white;
+        }
+    }
+
+
+}
+/*Drag and drop*/
+
+#image-upload-btn {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+}

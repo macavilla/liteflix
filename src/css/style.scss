@@ -282,15 +282,14 @@ aside {
         padding: 30px 35px 27px;
         position: relative;
 
-        min-width: calc(1440px / 100 * 50.6944);
+        width: calc(100% - 30px);
+        max-width: 730px;
+        margin: 0 15px;
 
         ._modal-close {
             position: absolute;
             top: 14px;
             right: 14px;
-            // svg{
-            //     fill: #9b9b9b;
-            // }
         }
 
         form {
@@ -303,7 +302,7 @@ aside {
                 min-height: 100px;
 
                 display: flex;
-                flex-flow: row nowrap;
+                flex-flow: row wrap;
                 justify-content: center;
                 align-items: center;
 
@@ -331,76 +330,96 @@ aside {
                         }
                     }
                 }
+                .field{
 
-                .label-file {
-                    position: relative;
-                    padding-left: 30px;
-                    cursor: pointer;
+                    padding: 0 35px;
 
-                    span {
+                    .label-file {
+                        position: relative;
+                        padding-left: 30px;
+                        cursor: pointer;
+    
                         font-family: Montserrat;
                         font-size: 16px;
                         color: #9b9b9b;
+    
 
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-items: center;
+    
                         .blue {
                             font-weight: bold;
                             color: #0076ff;
+                            margin-right: 5px;
+                        }
+    
+    
+                        .icon {
+                            right: calc(100% - 25px);
+                            top: -4px;
+                            bottom: -4px;
                         }
                     }
-
-                    .icon {
-                        right: calc(100% - 30px);
+    
+    
+    
+                    p {
+                        color: #000000;
+                        font-family: Montserrat;
+                        font-size: 12px;
+    
+                        margin-bottom: 10px;
+                        align-self: flex-start;
+                    }
+    
+                    progress {
+                        /* Reset the default appearance */
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 100%;
+    
+                        &::-webkit-progress-bar {
+                            height: 20px;
+                            border-radius: 10px;
+                            background-color: #dedede;
+                        }
+    
+                        &::-webkit-progress-value {
+                            border-radius: 10px;
+                            background-color: #7ed321;
+                        }
                     }
                 }
 
-
-
-                p {
-                    color: #000000;
-                    font-family: Montserrat;
-                    font-size: 12px;
-
-                    margin-bottom: 10px;
-                    align-self: flex-start;
-                }
-
-                progress {
-                    /* Reset the default appearance */
-                    -webkit-appearance: none;
-                    appearance: none;
-                    width: 100%;
-
-                    &::-webkit-progress-bar {
-                        height: 20px;
-                        border-radius: 10px;
-                        background-color: #dedede;
-                    }
-
-                    &::-webkit-progress-value {
-                        border-radius: 10px;
-                        background-color: #7ed321;
-                    }
-                }
 
             }
 
             #movie-info {
                 display: flex;
-                flex-flow: row nowrap;
+                flex-flow: row wrap;
                 justify-content: space-between;
                 align-items: flex-start;
 
+                @media screen and (max-width: 630px) {
+                    justify-content: center;
+
+                    >.field {
+                        width: 100%;
+                    }
+                }
+
                 >.field {
                     width: 48%;
-
+                    min-width: 270px;
+                    margin: 40px 0 10px;
 
 
                 }
 
                 .title {
                     position: relative;
-                    margin-bottom: 10px;
-                    margin: 40px 0 10px;
+
 
                     input[type=text] {
                         border: none;
@@ -473,7 +492,7 @@ aside {
 
 
                 .category {
-                    margin: 40px 0 10px;
+
                     //react-select custom styles
                     .select-category {
                         .category__control {
@@ -528,8 +547,8 @@ aside {
                                     transition: all .3s ease-in;
                                 }
 
-                                &.category__value-container--has-value{
-                                    &::after{
+                                &.category__value-container--has-value {
+                                    &::after {
                                         transform: translateY(-30px);
 
                                     }
@@ -587,6 +606,18 @@ aside {
                             }
                         }
                     }
+                }
+            }
+
+            .button-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 45px 0 0;
+
+                #movie-upload-btn {
+                    padding: 0 18%;
                 }
             }
         }

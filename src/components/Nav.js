@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 
 import Logo from "../img/liteflix-logo.png"
-import Modal from "./Modal/Modal";
+import Modal from "./Modal";
 
 
 

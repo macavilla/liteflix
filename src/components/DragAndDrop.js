@@ -74,9 +74,9 @@ export default class DragAndDrop extends Component {
                     <div className="field">
                         <label htmlFor="file" className={this.state.isLoading || this.state.error || this.state.success ? 'visually-hidden' : 'label-file'}>
                             <Icon icon="clip"></Icon>
-                            <span>
-                                <span className="blue">Agregar archivo </span>o arrastrarlo y soltarlo aquí
-                                    </span>
+
+                            <span className="blue">Agregar archivo </span> o arrastrarlo y soltarlo aquí
+
                             <input
                                 type="file"
                                 name="file"
