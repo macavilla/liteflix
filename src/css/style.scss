@@ -330,68 +330,67 @@ aside {
                         }
                     }
                 }
-                .field{
 
+                .field {
                     padding: 0 35px;
+                }
+                
+                .label-file {
+                    position: relative;
+                    padding-left: 30px;
+                    cursor: pointer;
 
-                    .label-file {
-                        position: relative;
-                        padding-left: 30px;
-                        cursor: pointer;
-    
-                        font-family: Montserrat;
-                        font-size: 16px;
-                        color: #9b9b9b;
-    
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    color: #9b9b9b;
 
-                        display: flex;
-                        flex-flow: row wrap;
-                        align-items: center;
-    
-                        .blue {
-                            font-weight: bold;
-                            color: #0076ff;
-                            margin-right: 5px;
-                        }
-    
-    
-                        .icon {
-                            right: calc(100% - 25px);
-                            top: -4px;
-                            bottom: -4px;
-                        }
+
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+
+                    .blue {
+                        font-weight: bold;
+                        color: #0076ff;
+                        margin-right: 5px;
                     }
-    
-    
-    
-                    p {
-                        color: #000000;
-                        font-family: Montserrat;
-                        font-size: 12px;
-    
-                        margin-bottom: 10px;
-                        align-self: flex-start;
-                    }
-    
-                    progress {
-                        /* Reset the default appearance */
-                        -webkit-appearance: none;
-                        appearance: none;
-                        width: 100%;
-    
-                        &::-webkit-progress-bar {
-                            height: 20px;
-                            border-radius: 10px;
-                            background-color: #dedede;
-                        }
-    
-                        &::-webkit-progress-value {
-                            border-radius: 10px;
-                            background-color: #7ed321;
-                        }
+
+
+                    .icon {
+                        right: calc(100% - 25px);
+                        top: -4px;
+                        bottom: -4px;
                     }
                 }
 
+
+
+                p {
+                    color: #000000;
+                    font-family: Montserrat;
+                    font-size: 12px;
+
+                    margin-bottom: 10px;
+                    align-self: flex-start;
+                }
+
+                progress {
+                    /* Reset the default appearance */
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 100%;
+
+                    &::-webkit-progress-bar {
+                        height: 20px;
+                        border-radius: 10px;
+                        background-color: #dedede;
+                    }
+
+                    &::-webkit-progress-value {
+                        border-radius: 10px;
+                        background-color: #7ed321;
+                    }
+                }
 
             }
 
@@ -618,6 +617,7 @@ aside {
 
                 #movie-upload-btn {
                     padding: 0 18%;
+                    min-width: 111px;
                 }
             }
         }
