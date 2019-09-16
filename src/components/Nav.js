@@ -2,12 +2,11 @@
 import React, { Component } from "react";
 
 import Logo from "../img/liteflix-logo.png"
-<<<<<<< HEAD
-import Modal from "./Modal/Modal";
-import Icon from "./Icon"
-=======
+import UserIcon from "../img/icon-user.png"
+import Bell from "../img/bell.png"
+
 import Modal from "./Modal";
->>>>>>> 154dd40405d514917d1ef0448df1b916fa8e1e96
+import Icon from "./Icon"
 
 
 
@@ -15,7 +14,7 @@ class Nav extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {isToggleOn: true};
+    this.state = { isToggleOn: true };
 
     // Este enlace es necesario para hacer que `this` funcione en el callback
     this.handleMenuTrigger = this.handleMenuTrigger.bind(this);
@@ -38,7 +37,7 @@ class Nav extends Component {
 
   handleMenuTrigger() {
     console.log('CLICK');
-    
+
     this.setState(state => ({
       isToggleOn: !state.isToggleOn
     }));
@@ -51,11 +50,36 @@ class Nav extends Component {
 
         <div className="nav-wrapper mobile">
           <button id="menu-trigger" className="" onClick={this.handleMenuTrigger} aria-label="Open the navigation menu">
-            <Icon icon="menu" aria-hidden="true"/>
+            <Icon icon="menu" aria-hidden="true" />
           </button>
 
           <div className={this.state.isToggleOn ? 'nav-content open' : 'nav-content closed'}>
-            <div className="user"></div>
+            <div className="user">
+              <div className="user-icon-wrapper">
+                <img src={UserIcon} alt="User icon" className="user-icon" />
+              </div>
+              <span className="user-name">Ernesto Garmendia</span>
+            </div>
+
+            <ul className="navigation-items">
+              <li>Cambiar Usuario</li>
+              <li>Configuración</li>
+              <li>Ayuda</li>
+            </ul>
+
+            <ul className="navigation-items">
+              <li> <img src={Bell} alt="Notification icon"/> Novedades</li>
+              <li>Series</li>
+              <li>Películas</li>
+              <li>Mi lista</li>
+              <li>Niños</li>
+            </ul>
+
+            <Modal modalProps={this.modalProps} modalContent={this.modalContent} />
+            
+            <ul className="navigation-items">
+              <li>Log Out</li>
+            </ul>
           </div>
 
         </div>
