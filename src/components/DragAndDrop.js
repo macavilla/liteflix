@@ -2,7 +2,7 @@
 // https://stackoverflow.com/questions/19183180/how-to-save-an-image-to-localstorage-and-display-it-on-the-next-page
 
 import React, { Component } from 'react';
-import Icon from "../Icon"
+import Icon from "./Icon"
 
 
 
@@ -74,9 +74,9 @@ export default class DragAndDrop extends Component {
                     <div className="field">
                         <label htmlFor="file" className={this.state.isLoading || this.state.error || this.state.success ? 'visually-hidden' : 'label-file'}>
                             <Icon icon="clip"></Icon>
-                            <span>
-                                <span className="blue">Agregar archivo </span>o arrastrarlo y soltarlo aquí
-                                    </span>
+
+                            <span className="blue">Agregar archivo </span> o arrastrarlo y soltarlo aquí
+
                             <input
                                 type="file"
                                 name="file"

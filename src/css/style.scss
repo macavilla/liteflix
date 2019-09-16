@@ -282,15 +282,14 @@ aside {
         padding: 30px 35px 27px;
         position: relative;
 
-        min-width: calc(1440px / 100 * 50.6944);
+        width: calc(100% - 30px);
+        max-width: 730px;
+        margin: 0 15px;
 
         ._modal-close {
             position: absolute;
             top: 14px;
             right: 14px;
-            // svg{
-            //     fill: #9b9b9b;
-            // }
         }
 
         form {
@@ -303,7 +302,7 @@ aside {
                 min-height: 100px;
 
                 display: flex;
-                flex-flow: row nowrap;
+                flex-flow: row wrap;
                 justify-content: center;
                 align-items: center;
 
@@ -332,24 +331,35 @@ aside {
                     }
                 }
 
+                .field {
+                    padding: 0 35px;
+                }
+                
                 .label-file {
                     position: relative;
                     padding-left: 30px;
                     cursor: pointer;
 
-                    span {
-                        font-family: Montserrat;
-                        font-size: 16px;
-                        color: #9b9b9b;
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    color: #9b9b9b;
 
-                        .blue {
-                            font-weight: bold;
-                            color: #0076ff;
-                        }
+
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+
+                    .blue {
+                        font-weight: bold;
+                        color: #0076ff;
+                        margin-right: 5px;
                     }
 
+
                     .icon {
-                        right: calc(100% - 30px);
+                        right: calc(100% - 25px);
+                        top: -4px;
+                        bottom: -4px;
                     }
                 }
 
@@ -386,21 +396,29 @@ aside {
 
             #movie-info {
                 display: flex;
-                flex-flow: row nowrap;
+                flex-flow: row wrap;
                 justify-content: space-between;
                 align-items: flex-start;
 
+                @media screen and (max-width: 630px) {
+                    justify-content: center;
+
+                    >.field {
+                        width: 100%;
+                    }
+                }
+
                 >.field {
                     width: 48%;
-                    
+                    min-width: 270px;
+                    margin: 40px 0 10px;
 
 
                 }
 
                 .title {
                     position: relative;
-                    margin-bottom: 10px;
-                    margin: 40px 0 10px;
+
 
                     input[type=text] {
                         border: none;
@@ -447,7 +465,6 @@ aside {
 
                     input:not(:placeholder-shown) {
                         padding: 15px 0;
-
                     }
 
                     input:not(:placeholder-shown)+label {
@@ -474,19 +491,45 @@ aside {
 
 
                 .category {
-                    margin: 32px 0 10px;
+
+                    //react-select custom styles
                     .select-category {
                         .category__control {
                             border: none;
                             border-bottom: 1px solid #000000;
+                            border-radius: 0;
+                            min-height: 30px;
 
-                            &.category__control--is-focused{
+
+
+                            &.category__control--is-focused {
                                 box-shadow: none;
                                 border-bottom: solid 1px #0076ff;
+
+                                .category__value-container {
+
+                                    &::after {
+                                        transform: translateY(-30px);
+                                    }
+                                }
+
                             }
 
                             .category__value-container {
-                                .category__placeholder {
+                                font-family: Montserrat;
+                                font-size: 16px;
+                                font-weight: normal;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: normal;
+                                letter-spacing: normal;
+                                color: #000000;
+                                padding: 2px 0px;
+                                overflow: visible;
+
+                                //animated placeholder
+                                &::after {
+                                    content: 'CATEGORIA';
                                     font-family: Montserrat;
                                     font-size: 12px;
                                     font-weight: bold;
@@ -496,16 +539,85 @@ aside {
                                     letter-spacing: 5px;
                                     color: #9b9b9b;
 
+                                    position: absolute;
+                                    top: 28%;
+                                    left: 0.5%;
 
-                                    top: 65%;
+                                    transition: all .3s ease-in;
+                                }
+
+                                &.category__value-container--has-value {
+                                    &::after {
+                                        transform: translateY(-30px);
+
+                                    }
                                 }
                             }
+                        }
 
-                            .category__indicators{
-                                display: none;
+                        .category__menu {
+                            top: 0;
+                            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+                            max-height: 260px;
+
+                            margin: 0;
+                            border-radius: 8px;
+
+                            .category__menu-list {
+                                max-height: 215px;
+                                overflow-y: scroll;
+                                padding: 0 60px 0 20px;
+                                margin: 20px 30px 25px 0;
+
+                                &::-webkit-scrollbar {
+                                    width: 11px;
+                                    max-height: 215px;
+                                }
+
+                                &::-webkit-scrollbar-track {
+                                    border-radius: 5.5px;
+                                    background: #f3f3f3;
+                                }
+
+                                &::-webkit-scrollbar-thumb {
+                                    border-radius: 5.5px;
+                                    background-color: #9b9b9b;
+                                }
+
+
+                                .category__option {
+                                    font-family: Montserrat;
+                                    font-size: 16px;
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: 1.5;
+                                    letter-spacing: normal;
+                                    color: #9b9b9b;
+                                    border-bottom: 1px solid #cccccc;
+
+                                    &.category__option--is-selected,
+                                    &.category__option--is-focused {
+                                        background: none;
+                                        color: black;
+                                    }
+                                }
                             }
                         }
                     }
+                }
+            }
+
+            .button-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 45px 0 0;
+
+                #movie-upload-btn {
+                    padding: 0 18%;
+                    min-width: 111px;
                 }
             }
         }

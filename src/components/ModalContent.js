@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import FocusTrap from 'focus-trap-react';
 import Form from './Form';
-import Icon from '../Icon';
+import Icon from './Icon';
 
 
 
@@ -40,8 +40,8 @@ export class ModalContent extends Component {
                 // </svg>
 
               }
-              <Icon icon="close" /> 
-              </button>
+              <Icon icon="close" />
+            </button>
             <div className="modal-body">
               {
                 // passed from Nav in modalContent = ()

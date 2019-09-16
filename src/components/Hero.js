@@ -35,7 +35,7 @@ class Hero extends Component {
       )
     } else {
       let base_url = "https://image.tmdb.org/t/p/"
-      let item = items.results[2]
+      let item = items.results[1]
       let title = item.original_title
       let overview = item.overview
       let coverImg = base_url + "/original/" + item.backdrop_path
@@ -45,29 +45,34 @@ class Hero extends Component {
         backgroundImage: "linear-gradient(to top, rgba(0, 0, 0, 0.2), #000000), url(" + coverImg + ")",
       }
       return (
-        <div className="hero-item" style={heroBackground} aria-label={title}>
-          <div className="details">
-            <p className="original">
-              ORIGINAL DE <span className="bold">LITEFLIX</span>
-            </p>
-            <h3 className="hero-title"> {title} </h3>
+        <header className="hero-wrapper">
 
-            <div className="button-wrapper">
-              <button className="play">
-                <i className="play-icon icon"></i>
-                <span className="hero-btn">Reproducir</span>
-              </button>
-              <button className="my-list">
-                <i className="add-icon icon"></i>
-                <span className="hero-btn">Mi Lista</span>
-              </button>
+          <div className="hero-item" style={heroBackground} aria-label={title}>
+            <div className="details">
+              <p className="original">
+                ORIGINAL DE <span className="bold">LITEFLIX</span>
+              </p>
+              <h3 className="hero-title"> {title} </h3>
+
+              <div className="button-wrapper">
+                <button className="play">
+                  <i className="play-icon icon"></i>
+                  <span className="hero-btn">Reproducir</span>
+                </button>
+                <button className="my-list">
+                  <i className="add-icon icon"></i>
+                  <span className="hero-btn">Mi Lista</span>
+                </button>
+              </div>
+              <p className="hero-overview">
+                <span className="bold">Ver temporada 1</span> <br />
+                {overview}{" "}
+              </p>
             </div>
-            <p className="hero-overview">
-              <span className="bold">Ver temporada 1</span> <br />
-              {overview}{" "}
-            </p>
           </div>
-        </div>
+
+        </header>
+
       )
     }
   }
