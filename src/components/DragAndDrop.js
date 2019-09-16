@@ -2,7 +2,7 @@
 // https://stackoverflow.com/questions/19183180/how-to-save-an-image-to-localstorage-and-display-it-on-the-next-page
 
 import React, { Component } from 'react';
-import Icon from "../Icon"
+import Icon from "./Icon"
 
 
 

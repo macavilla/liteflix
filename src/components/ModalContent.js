@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import FocusTrap from 'focus-trap-react';
 import Form from './Form';
-import Icon from '../Icon';
+import Icon from './Icon';
 
 
 

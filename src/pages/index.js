@@ -1,7 +1,8 @@
 import React from "react";
-import Nav from "../components/Nav";
-import Hero from "../components/Hero";
-import Main from "../components/Main";
+// import Nav from "../components/Nav";
+// import Hero from "../components/Hero";
+// import Main from "../components/Main";
+import StateManager from "../components/StateManager";
 
 
 
@@ -12,17 +13,18 @@ import Main from "../components/Main";
 
 export default () => (
 
-  <div id="home" className="wrapper">
-    <h1 className="visually-hidden">Inicio de LiteFlix</h1>
+  <StateManager></StateManager>
+  // <div id="home" className="wrapper">
+  //   <h1 className="visually-hidden">Inicio de LiteFlix</h1>
 
 
-    <Nav />
-    <Hero />
-    {
-    // <header className="hero-wrapper">
-    // </header>
-  }
-    <Main />
+  //   <Nav />
+  //   <Hero />
+  //   {
+  //   // <header className="hero-wrapper">
+  //   // </header>
+  // }
+  //   <Main />
 
-  </div>
+  // </div>
 )

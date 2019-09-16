@@ -2,18 +2,17 @@
 
 - <Modal /> 
     - localStorage e imagenes?
-    - if Form incomplete, <button classNAme="submit" submit disabled>
-    - <ModalContent> 
-        - <MovieTitle>
-        - <MovieCover>
-        - <MovieGenre>
+    - if Form incomplete, <button className="submit" submit disabled>
+
 
 - <Nav> 
     - <PopOver /> (user) 
     - Estilos Nav dk
     - Estilos Nav mb
 
-- <Main> ? componente que maneje qué películas renderear en main. 
+- <StateManager> componente que maneje qué películas renderear en main. 
+    - Lift state up in parent component
+    - https://reactjs.org/docs/lifting-state-up.html#lifting-state-up
     - state: addedMovies
 
 
@@ -30,11 +29,15 @@
     - Form y estilos <Modal />
     - localStorage: https://developer.mozilla.org/es/docs/Web/API/Window/localStorage
     - localStorage input: https://programmingwithmosh.com/react/localstorage-react/
-
+    - <ModalContent>
+    - <Form> 
+        - <input id="title" />
+        - <DragAndDrop>
+        - <Categories>
 
 - Estilos <Populares />
 
-- Test deploy process
+- Test deploy 
 
 
 

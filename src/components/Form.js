@@ -1,3 +1,6 @@
+// TO DO: Lift state up in parent component
+// https://reactjs.org/docs/lifting-state-up.html#lifting-state-up
+
 import React, { Component } from 'react';
 import DragAndDrop from './DragAndDrop';
 import Categories from './Categories';
@@ -34,21 +37,7 @@ export default class Form extends Component {
   };
 
 
-  componentDidMount() {
 
-    // this.setState({
-    //   cover: localStorage.getItem(cover),
-    //   title: localStorage.getItem(title),
-    //   category: localStorage.getItem(category)
-    // });
-
-    if (this.state.cover && this.state.title && this.state.category) {
-      console.log('====================================');
-      console.log(' completo');
-      console.log('====================================');
-    }
-
-  }
   render() {
     return (
       <form onSubmit={this.handleFormSubmit}>
