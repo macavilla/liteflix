@@ -48,13 +48,25 @@ class Nav extends Component {
 
     return (
       <nav>
-
+        {
+          /*Nav mobile*/
+        }
         <div className={isToggleOn ? "nav-wrapper mobile open" : "nav-wrapper mobile"}>
-          <button id="menu-trigger" className="" onClick={this.handleMenuTrigger} aria-label="Open the navigation menu">
+          <button id="menu-trigger"
+            className=""
+            onClick={this.handleMenuTrigger}
+            aria-controls="nav-content"
+            aria-haspopup="true"
+            aria-expanded={isToggleOn ? true : false}
+            aria-label="Open the navigation menu">
             <Icon icon="menu" aria-hidden="true" />
           </button>
 
-          <div className={isToggleOn ? 'nav-content open' : 'nav-content closed'}>
+          <div id="nav-content"
+            role="menu"
+            className={isToggleOn ? 'open' : 'closed'}
+            aria-label="Menu"
+          >
             <div className="user">
               <div className="user-icon-wrapper">
                 <img src={UserIcon} alt="User icon" className="user-icon" />
@@ -63,27 +75,32 @@ class Nav extends Component {
             </div>
 
             <ul className="navigation-items">
-              <li>Cambiar Usuario</li>
-              <li>Configuración</li>
-              <li>Ayuda</li>
+              <li role="menuitem">Cambiar Usuario</li>
+              <li role="menuitem">Configuración</li>
+              <li role="menuitem">Ayuda</li>
             </ul>
 
             <ul className="navigation-items">
-              <li> <img src={Bell} alt="Notification icon"/> Novedades</li>
-              <li>Series</li>
-              <li>Películas</li>
-              <li>Mi lista</li>
-              <li>Niños</li>
+              <li role="menuitem"> <img src={Bell} alt="Notification icon" /> Novedades</li>
+              <li role="menuitem">Series</li>
+              <li role="menuitem">Películas</li>
+              <li role="menuitem">Mi lista</li>
+              <li role="menuitem">Niños</li>
             </ul>
 
             <Modal modalProps={this.modalProps} modalContent={this.modalContent} />
-            
+
             <ul className="navigation-items">
-              <li>Log Out</li>
+              <li role="menuitem">Log Out</li>
             </ul>
           </div>
 
         </div>
+
+        {
+          /* Nav Desktop*/
+        }
+
         <div className="nav-wrapper desktop">
           <ul className="navigation-items left">
             <li>
