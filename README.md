@@ -1,14 +1,20 @@
 #To do:
 
+
+- STYLES MOBILE
+
+- SEO
+    - <title> y <meta> con hamlet: https://www.gatsbyjs.org/docs/add-page-metadata/
+
+- Accesibility
+    - role attr in menu elements
+    - accessible name on all buttons
+
 - <Modal /> 
     - localStorage e imagenes?
     - if Form incomplete, <button className="submit" submit disabled>
 
 
-- <Nav> 
-    - <PopOver /> (user) 
-    - Estilos Nav dk
-    - Estilos Nav mb
 
 - <StateManager> componente que maneje qué películas renderear en main. 
     - Lift state up in parent component
@@ -22,6 +28,9 @@
 
 - <Nav> 
     - <Agregar /> (button) 
+    - <PopOver /> (user) 
+    - Estilos Nav dk
+    - Estilos Nav mb
 
 
 - <Modal /> 
