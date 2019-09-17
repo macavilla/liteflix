@@ -129,6 +129,7 @@ nav {
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
+        padding: 0;
 
         img {
             margin: 0 0 0 10px;
@@ -136,16 +137,20 @@ nav {
     }
 
     #pop-up-content {
-        position: absolute;
         background-color: white;
         border-radius: 5px;
+        
+        position: absolute;
+        right: 0;
+        top: calc(100% + 16px);
 
-        &.closed{
+        &.closed {
             display: none;
         }
 
+        padding: 11px 10px 0;
+
         .user-list {
-            padding: 11px 10px 0;
 
             .user {
                 color: #9b9b9b;
@@ -160,22 +165,37 @@ nav {
                 border-radius: 18.5px;
                 padding: 6px 7px;
                 margin: 0;
+                max-width: 111px;
 
                 transition: all .3s ease-in-out;
+
                 .user-icon-wrapper {
                     background-color: #9b9b9b;
                     border-radius: 50%;
                     width: 25px;
                     height: 25px;
+                    flex-shrink: 0;
 
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     margin-right: 8px;
 
+
+                    transition: all .3 ease-in-out;
+
                     .user-icon {
                         filter: grayscale(100%) brightness(50%);
+                        transition: all .3 ease-in-out;
                     }
+                }
+
+                .user-name {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
 
                 &.active,
@@ -183,6 +203,7 @@ nav {
                     color: black;
 
                     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
                     .user-icon-wrapper {
                         background-color: #ce00ff;
 
@@ -194,10 +215,40 @@ nav {
             }
         }
 
-        .navigation-items{
+        .navigation-items {
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            margin: 5px 0 6px;
+
+            li {
+                font-family: Montserrat;
+                font-size: 12px;
+                color: #000000;
+
+                padding: 6px 0 7px;
+                border-bottom: solid 1px #cccccc;
+                width: 100%;
+
+                &:last-of-type {
+                    border: none;
+                }
+            }
 
         }
+        // rounded 
+        &:before{
+            content: '';
+            position: absolute;
+            top: -3%;
+            right: 19%;
+            width: 17px;
+            height: 17px;
+            transform: rotate(-315deg);
+            border-radius: 5px;
+            background-color: white;
+        }
     }
+
 }
 
 .hero-wrapper {

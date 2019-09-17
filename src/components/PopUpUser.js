@@ -52,7 +52,7 @@ export default class UserPopUp extends Component {
                     id="pop-up-content"
                     className={this.state.isOpen ? 'open' : 'closed'}>
                     <ul className="user-list">
-                        <li className="user active">
+                        <li className="user active" role="menuitem">
                             <div className="user-icon-wrapper">
                                 <img src={UserIcon} alt="User icon" className="user-icon" />
                             </div>
@@ -61,15 +61,15 @@ export default class UserPopUp extends Component {
                                 // <span className="user-name">Ernesto Garmendia</span>
                             }
 
-                            <span className="user-name">Ernesto G...</span>
+                            <span className="user-name">Ernesto Garmendia</span>
                         </li>
-                        <li className="user">
+                        <li className="user" role="menuitem">
                             <div className="user-icon-wrapper">
                                 <img src={UserIcon} alt="User icon" className="user-icon" />
                             </div>
                             <span className="user-name">User 03</span>
                         </li>
-                        <li className="user">
+                        <li className="user" role="menuitem">
                             <div className="user-icon-wrapper">
                                 <img src={UserIcon} alt="User icon" className="user-icon" />
                             </div>
@@ -80,7 +80,7 @@ export default class UserPopUp extends Component {
                     <ul className="navigation-items">
                         <li>Configuración</li>
                         <li>Ayuda</li>
-                        <li>Log Out</li>
+                        <li className="bold">Log Out</li>
                     </ul>
                     
                 </div>
