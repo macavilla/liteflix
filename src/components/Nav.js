@@ -3,6 +3,7 @@ import React, { Component } from "react";
 
 import Logo from "../img/liteflix-logo.png"
 import Modal from "./Modal";
+import UserPopUp from "./PopUpUser";
 
 
 
@@ -52,7 +53,9 @@ class Nav extends Component {
           <ul className="navigation-items right">
             <li>Niños</li>
             <li>Bell</li>
-            <li>User Dropdows</li>
+            <li>
+              <UserPopUp />
+            </li>
           </ul>
         </div>
       </nav>

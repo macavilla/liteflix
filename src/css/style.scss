@@ -120,6 +120,86 @@ nav {
     }
 }
 
+//PopUpUser
+.pop-up-wrapper {
+    position: relative;
+
+    button#pop-up-trigger {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin: 0 0 0 10px;
+        }
+    }
+
+    #pop-up-content {
+        position: absolute;
+        background-color: white;
+        border-radius: 5px;
+
+        &.closed{
+            display: none;
+        }
+
+        .user-list {
+            padding: 11px 10px 0;
+
+            .user {
+                color: #9b9b9b;
+                font-family: Montserrat;
+                font-size: 12px;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+
+                // margin: 6px 0;
+                border-radius: 18.5px;
+                padding: 6px 7px;
+                margin: 0;
+
+                transition: all .3s ease-in-out;
+                .user-icon-wrapper {
+                    background-color: #9b9b9b;
+                    border-radius: 50%;
+                    width: 25px;
+                    height: 25px;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 8px;
+
+                    .user-icon {
+                        filter: grayscale(100%) brightness(50%);
+                    }
+                }
+
+                &.active,
+                &:hover {
+                    color: black;
+
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+                    .user-icon-wrapper {
+                        background-color: #ce00ff;
+
+                        .user-icon {
+                            filter: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navigation-items{
+
+        }
+    }
+}
+
 .hero-wrapper {
     .hero-item {
         padding: 0 $margin-dk;
@@ -330,7 +410,8 @@ aside {
                         }
                     }
                 }
-                .field{
+
+                .field {
 
                     padding: 0 35px;
 
@@ -338,53 +419,53 @@ aside {
                         position: relative;
                         padding-left: 30px;
                         cursor: pointer;
-    
+
                         font-family: Montserrat;
                         font-size: 16px;
                         color: #9b9b9b;
-    
+
 
                         display: flex;
                         flex-flow: row wrap;
                         align-items: center;
-    
+
                         .blue {
                             font-weight: bold;
                             color: #0076ff;
                             margin-right: 5px;
                         }
-    
-    
+
+
                         .icon {
                             right: calc(100% - 25px);
                             top: -4px;
                             bottom: -4px;
                         }
                     }
-    
-    
-    
+
+
+
                     p {
                         color: #000000;
                         font-family: Montserrat;
                         font-size: 12px;
-    
+
                         margin-bottom: 10px;
                         align-self: flex-start;
                     }
-    
+
                     progress {
                         /* Reset the default appearance */
                         -webkit-appearance: none;
                         appearance: none;
                         width: 100%;
-    
+
                         &::-webkit-progress-bar {
                             height: 20px;
                             border-radius: 10px;
                             background-color: #dedede;
                         }
-    
+
                         &::-webkit-progress-value {
                             border-radius: 10px;
                             background-color: #7ed321;
