@@ -15,7 +15,7 @@ class Nav extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { isToggleOn: true };
+    this.state = { isToggleOn: false };
 
     // Este enlace es necesario para hacer que `this` funcione en el callback
     this.handleMenuTrigger = this.handleMenuTrigger.bind(this);
