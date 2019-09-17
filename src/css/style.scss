@@ -84,7 +84,8 @@ nav {
 
             @media screen and (max-width: 1024px) {
                 display: block;
-                &.open{
+
+                &.open {
                     background-color: rgba(0, 0, 0, 0.6);
                     position: fixed;
                     left: 0;
@@ -96,11 +97,13 @@ nav {
                     transition: all .5s ease-in-out;
 
                 }
-                button#menu-trigger{
+
+                button#menu-trigger {
                     left: $margin-mb;
                     top: 18px;
                 }
-                #nav-content{
+
+                #nav-content {
                     position: absolute;
                     left: 0;
                     width: 228px;
@@ -112,17 +115,16 @@ nav {
 
                     padding-top: 65px;
                     padding: 65px 20px 0 $margin-mb;
-                    &.open{
+
+                    &.open {}
+
+                    &.closed {
+                        transform: translateX(-200%);
 
                     }
 
-                    &.closed{
-                        transform: translateX(-200%); 
 
-                    }
-
-
-                    .user{
+                    .user {
                         border-radius: 18.5px;
                         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
                         background-color: #222222;
@@ -135,7 +137,7 @@ nav {
                         align-items: center;
 
 
-                        .user-icon-wrapper{
+                        .user-icon-wrapper {
                             background-color: #ce00ff;
                             border-radius: 50%;
                             width: 25px;
@@ -146,7 +148,7 @@ nav {
                             align-items: center;
                         }
 
-                        .user-name{
+                        .user-name {
                             font-family: Montserrat;
                             font-size: 12px;
                             color: white;
@@ -155,41 +157,47 @@ nav {
 
                     }
 
-                    .navigation-items{
-                        li{
+                    .navigation-items {
+                        li {
                             font-family: Montserrat;
                             color: white;
                         }
+
                         //underlined items
-                        &:nth-of-type(1){
+                        &:nth-of-type(1) {
                             margin: 12px 0 25px;
-                            li{
+
+                            li {
                                 font-size: 12px;
                                 border-bottom: 1px solid #222222;
                                 padding: 7px 0;
                             }
                         }
 
-                        &:nth-of-type(2){
+                        &:nth-of-type(2) {
                             margin: 0 0 16px;
-                            li{
+
+                            li {
                                 font-size: 14px;
                                 padding: 6px 0;
+
                                 //notification item
-                                &:nth-of-type(1){
+                                &:nth-of-type(1) {
                                     display: flex;
                                     flex-flow: row nowrap;
                                     align-items: center;
 
-                                    img{
+                                    img {
                                         margin-right: 5px
                                     }
                                 }
                             }
                         }
-                        &:nth-of-type(3){
+
+                        &:nth-of-type(3) {
                             margin: 27px 0 0;
-                            li{
+
+                            li {
                                 font-size: 12px;
                                 font-weight: bold;
                             }
@@ -252,7 +260,7 @@ nav {
     #pop-up-content {
         background-color: white;
         border-radius: 5px;
-        
+
         position: absolute;
         right: 0;
         top: calc(100% + 16px);
@@ -348,8 +356,9 @@ nav {
             }
 
         }
+
         // rounded 
-        &:before{
+        &:before {
             content: '';
             position: absolute;
             top: -3%;
@@ -578,38 +587,34 @@ aside {
                 .field {
                     padding: 0 35px;
                 }
-                
+
                 .label-file {
+
                     position: relative;
                     padding-left: 30px;
                     cursor: pointer;
 
-                    .label-file {
-                        position: relative;
-                        padding-left: 30px;
-                        cursor: pointer;
-
-                        font-family: Montserrat;
-                        font-size: 16px;
-                        color: #9b9b9b;
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    color: #9b9b9b;
 
 
-                        display: flex;
-                        flex-flow: row wrap;
-                        align-items: center;
-
-                        .blue {
-                            font-weight: bold;
-                            color: #0076ff;
-                            margin-right: 5px;
-                        }
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
 
 
-                        .icon {
-                            right: calc(100% - 25px);
-                            top: -4px;
-                            bottom: -4px;
-                        }
+                    .blue {
+                        font-weight: bold;
+                        color: #0076ff;
+                        margin-right: 5px;
+                    }
+
+
+                    .icon {
+                        right: calc(100% - 25px);
+                        top: -4px;
+                        bottom: -4px;
                     }
 
 
