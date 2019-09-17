@@ -44,16 +44,17 @@ class Nav extends Component {
   }
 
   render() {
+    const { isToggleOn } = this.state;
 
     return (
       <nav>
 
-        <div className="nav-wrapper mobile">
+        <div className={isToggleOn ? "nav-wrapper mobile open" : "nav-wrapper mobile"}>
           <button id="menu-trigger" className="" onClick={this.handleMenuTrigger} aria-label="Open the navigation menu">
             <Icon icon="menu" aria-hidden="true" />
           </button>
 
-          <div className={this.state.isToggleOn ? 'nav-content open' : 'nav-content closed'}>
+          <div className={isToggleOn ? 'nav-content open' : 'nav-content closed'}>
             <div className="user">
               <div className="user-icon-wrapper">
                 <img src={UserIcon} alt="User icon" className="user-icon" />
