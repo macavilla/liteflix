@@ -10,7 +10,7 @@ export default class UserPopUp extends Component {
         super(props);
 
         this.state = {
-            isOpen: true
+            isOpen: false
         }
 
         this.handleClic = this.handleClic.bind(this)
