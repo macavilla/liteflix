@@ -53,7 +53,7 @@ class Nav extends Component {
           /*Nav mobile*/
         }
         <div className={isToggleOn ? "nav-wrapper mobile open" : "nav-wrapper mobile"}>
-          <img src={Logo} class="liteflix-logo" alt="Liteflix Logo" />
+          <img src={Logo} className="liteflix-logo" alt="Liteflix Logo" />
           <button id="menu-trigger"
             className=""
             onClick={this.handleMenuTrigger}
