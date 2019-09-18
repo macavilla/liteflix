@@ -465,6 +465,10 @@ nav {
 
 main.inner-wrapper {
     margin: -64px 0 0;
+
+    h2 {
+        margin: 0 0 20px;
+    }
 }
 
 .flex-wrapper {
@@ -559,9 +563,6 @@ main.inner-wrapper {
 }
 
 .populares-wrapper {
-    h2 {
-        margin: 0 0 20px;
-    }
 
     .flex-wrapper {
         .movie-wrapper {
@@ -597,6 +598,36 @@ main.inner-wrapper {
 
                 .big-arrow {
                     align-self: center;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $tablet-breakpoint){
+        .flex-wrapper {
+            .movie-wrapper {
+                height: auto;
+    
+                .movie-cover {
+                    height: auto;
+                    width: 100%;
+                    position: relative;
+                    left: 0;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $mobile-breakpoint){
+        .flex-wrapper {
+            .movie-wrapper {
+                height: auto;
+                width: 49%;
+    
+                .movie-cover {
+                    height: auto;
+                    width: 100%;
+                    position: relative;
+                    left: 0;
                 }
             }
         }
