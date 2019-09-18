@@ -2,14 +2,8 @@
 //https://stackoverflow.com/questions/43313372/how-to-listen-to-localstorage-in-react-js
 
 import React, { Component } from "react";
-
-
 import Proximamente from "./Proximamente";
-
 import Popular from "./Popular";
-
-
-
 
 class Main extends Component {
     constructor(props) {
