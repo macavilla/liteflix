@@ -1,6 +1,5 @@
 #To do:
 
-- <Nav> mobile agregar logo
 
 - Accesibility
     - role attr in menu elements
@@ -27,6 +26,7 @@
     - <PopOver /> (user) 
     - Estilos Nav dk
     - Estilos Nav mb
+    - mobile agregar logo
 
 
 - <Modal /> 
