@@ -2,17 +2,22 @@
 
 
 /*COLORES*/
-$white: #fff;
+$lite-red: #ff0000;
+$modal-blue: #0076ff;
 
 
+//breakpoint nav mobile/desktop
+$nav-breakpoint: 1024px;
 
-/* GRADIENTES */
-$gradient-light-blue: linear-gradient(to right, #34a4dc, #328cd0);
 
+//max-width for mobile
+$tablet-breakpoint: 1024px;
+$mobile-breakpoint: 768px;
 
 
 /* Margins */
 
-$margin-mb: 15px;
 $margin-dk: 11.38%;
+$margin-tb: 7%;
+$margin-mb: 15px;
  
