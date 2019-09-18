@@ -103,6 +103,19 @@ nav {
 
                     transition: all .5s ease-in-out;
 
+                    .liteflix-logo{
+                        left: 47.5px;
+                    }
+
+                }
+
+                .liteflix-logo{
+                    position: absolute;
+                    top: 13px;
+                    left: calc(50% - 47.5px);
+
+                    transition: all 1s ease;
+                    z-index: 10;
                 }
 
                 button#menu-trigger {
@@ -123,11 +136,8 @@ nav {
                     padding-top: 65px;
                     padding: 65px 20px 0 $margin-mb;
 
-                    &.open {}
-
                     &.closed {
                         transform: translateX(-200%);
-
                     }
 
 
@@ -289,7 +299,6 @@ nav {
                 justify-content: flex-start;
                 align-items: center;
 
-                // margin: 6px 0;
                 border-radius: 18.5px;
                 padding: 6px 7px;
                 margin: 0;
@@ -541,7 +550,6 @@ main.inner-wrapper {
             margin: 0 0 2%;
     
             .on-hover {
-                // top: 110%;
                 padding: 15px;
             }
         }
@@ -555,7 +563,6 @@ main.inner-wrapper {
             margin: 0 0 10px;
     
             .on-hover {
-                // top: 110%;
                 padding: 15px;
             }
         }

@@ -18,7 +18,7 @@ export default () => (
       <title>Liteflix</title>
       <meta name="Description" content="Catálogo de películas dinámico." />
     </Helmet>
-    <StateManager>  </StateManager>
+    <StateManager />
   </React.Fragment>
 
 )
