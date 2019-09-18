@@ -1,24 +1,21 @@
 #To do:
 
-
-
-- SEO
-    - <title> y <meta> con hamlet: https://www.gatsbyjs.org/docs/add-page-metadata/
+- <Nav> mobile agregar logo
 
 - Accesibility
     - role attr in menu elements
     - accessible name on all buttons
 
 - <Modal /> 
-    - localStorage e imagenes?
     - if Form incomplete, <button className="submit" submit disabled>
-
-
+    - Submit button
+    - Thank you on form submit !
 
 - <StateManager> componente que maneje qué películas renderear en main. 
     - Lift state up in parent component
     - https://reactjs.org/docs/lifting-state-up.html#lifting-state-up
     - state: addedMovies
+    - localStorage e imagenes?
 
 
 
@@ -51,6 +48,9 @@
     -Hero
     -Proximamente
     -Populares
+
+- SEO
+    - <title> y <meta> con hamlet: https://www.gatsbyjs.org/docs/add-page-metadata/
 
 
 
