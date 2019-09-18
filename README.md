@@ -1,10 +1,6 @@
 #To do:
 
 
-- STYLES MOBILE
-    -Hero
-    -Proximamente
-    -Populares
 
 - SEO
     - <title> y <meta> con hamlet: https://www.gatsbyjs.org/docs/add-page-metadata/
@@ -51,6 +47,10 @@
 
 - Test deploy 
 
+- STYLES MOBILE
+    -Hero
+    -Proximamente
+    -Populares
 
 
 

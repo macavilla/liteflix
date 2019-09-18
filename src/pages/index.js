@@ -1,4 +1,6 @@
 import React from "react";
+import { Helmet } from "react-helmet"
+
 import StateManager from "../components/StateManager";
 
 
@@ -10,18 +12,13 @@ import StateManager from "../components/StateManager";
 
 export default () => (
 
-  <StateManager></StateManager>
-  // <div id="home" className="wrapper">
-  //   <h1 className="visually-hidden">Inicio de LiteFlix</h1>
+  <React.Fragment>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Liteflix</title>
+      <meta name="Description" content="Catálogo de películas dinámico." />
+    </Helmet>
+    <StateManager>  </StateManager>
+  </React.Fragment>
 
-
-  //   <Nav />
-  //   <Hero />
-  //   {
-  //   // <header className="hero-wrapper">
-  //   // </header>
-  // }
-  //   <Main />
-
-  // </div>
 )
