@@ -1,20 +1,24 @@
 #To do:
 
-
+- play button .on-hover
+- Proximamente pasar las variables del fetch al estado
+    - receive as a prop the localstoraged movie
 - Accesibility
     - role attr in menu elements
     - accessible name on all buttons
 
 - <Modal /> 
     - if Form incomplete, <button className="submit" submit disabled>
-    - Submit button
     - Thank you on form submit !
 
 - <StateManager> componente que maneje qué películas renderear en main. 
+    - listen to localStorage? https://stackoverflow.com/questions/43313372/how-to-listen-to-localstorage-in-react-js
     - Lift state up in parent component
     - https://reactjs.org/docs/lifting-state-up.html#lifting-state-up
     - state: addedMovies
     - localStorage e imagenes?
+
+- .env file for api key yes or no? https://dev.to/andersjr1984/firebase-functions-react-users-need-to-stop-storing-sensitive-api-keys-in-env-files-d35
 
 
 
@@ -39,6 +43,7 @@
         - <input id="title" />
         - <DragAndDrop>
         - <Categories>
+    - Submit button
 
 - Estilos <Populares />
 

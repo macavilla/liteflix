@@ -69,11 +69,13 @@ nav,
 main {
     padding: 0 $margin-dk;
     transition: all .5s ease-in-out;
-    @media screen and (max-width: $tablet-breakpoint){
-        padding: 0 $margin-tb;   
+
+    @media screen and (max-width: $tablet-breakpoint) {
+        padding: 0 $margin-tb;
     }
-    @media screen and (max-width: $mobile-breakpoint){
-        padding: 0 $margin-mb;   
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        padding: 0 $margin-mb;
     }
 }
 
@@ -103,13 +105,13 @@ nav {
 
                     transition: all .5s ease-in-out;
 
-                    .liteflix-logo{
+                    .liteflix-logo {
                         left: 47.5px;
                     }
 
                 }
 
-                .liteflix-logo{
+                .liteflix-logo {
                     position: absolute;
                     top: 13px;
                     left: calc(50% - 47.5px);
@@ -405,7 +407,7 @@ nav {
             max-width: 537px;
             width: 100%;
 
-            .original{
+            .original {
                 margin-bottom: 18px;
             }
 
@@ -418,8 +420,10 @@ nav {
             .hero-overview {
                 //wrap text if it excedes n lines
                 line-height: 1.26em;
-                height: calc(1.26em * 5); /* height is 5x line-height, so five lines will display */
-                overflow: hidden; /* prevents extra lines from being visible */
+                height: calc(1.26em * 5);
+                /* height is 5x line-height, so five lines will display */
+                overflow: hidden;
+                /* prevents extra lines from being visible */
                 transition: all .3s ease-in-out;
 
             }
@@ -437,13 +441,13 @@ nav {
             flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
-    
-            .details {    
+
+            .details {
                 .button-wrapper {
                     justify-content: center;
                     margin: 20px 0 25px;
                 }
-    
+
                 .hero-overview {
                     transition: all .3s ease-in-out;
                     opacity: 0;
@@ -453,17 +457,19 @@ nav {
             }
         }
     }
+
     @media screen and (max-width: $mobile-breakpoint) {
         .hero-item {
             padding: 0 $margin-mb;
             height: 545px;
+
             // background-size: 130% auto;
             // background-position: center center;
             .details {
                 .button-wrapper {
                     margin: 8px 0 0;
 
-                    .my-list{
+                    .my-list {
                         display: none;
                     }
                 }
@@ -523,6 +529,13 @@ main.inner-wrapper {
 
             .button-wrapper:nth-of-type(2) {
                 align-self: center;
+
+                .wrap-circle {
+                    .circle {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
             }
         }
 
@@ -538,30 +551,31 @@ main.inner-wrapper {
             }
         }
     }
-    
-    
-    
-    @media screen and (max-width: $tablet-breakpoint){
+
+
+
+    @media screen and (max-width: $tablet-breakpoint) {
         flex-flow: row wrap;
         margin-bottom: 55px;
-    
+
         .movie-wrapper {
             width: 49%;
             margin: 0 0 2%;
-    
+
             .on-hover {
                 padding: 15px;
             }
         }
     }
-    @media screen and (max-width: $mobile-breakpoint){
+
+    @media screen and (max-width: $mobile-breakpoint) {
         flex-flow: row wrap;
         margin-bottom: 55px;
-    
+
         .movie-wrapper {
             width: 100%;
             margin: 0 0 10px;
-    
+
             .on-hover {
                 padding: 15px;
             }
@@ -610,11 +624,11 @@ main.inner-wrapper {
         }
     }
 
-    @media screen and (max-width: $tablet-breakpoint){
+    @media screen and (max-width: $tablet-breakpoint) {
         .flex-wrapper {
             .movie-wrapper {
                 height: auto;
-    
+
                 .movie-cover {
                     height: auto;
                     width: 100%;
@@ -624,12 +638,13 @@ main.inner-wrapper {
             }
         }
     }
-    @media screen and (max-width: $mobile-breakpoint){
+
+    @media screen and (max-width: $mobile-breakpoint) {
         .flex-wrapper {
             .movie-wrapper {
                 height: auto;
                 width: 49%;
-    
+
                 .movie-cover {
                     height: auto;
                     width: 100%;

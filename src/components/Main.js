@@ -32,7 +32,7 @@ class Main extends Component {
 
                 </section>
                 <section className="populares-wrapper">
-                    <h2>Populares  de Liteflix</h2>
+                    <h2>POPULARES  DE LITEFLIX</h2>
                     <div className="flex-wrapper">
                         <Popular index={0} />
                         <Popular index={1} />
