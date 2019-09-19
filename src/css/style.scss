@@ -441,6 +441,7 @@ nav {
             flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
+            
 
             .details {
                 .button-wrapper {
@@ -455,6 +456,8 @@ nav {
                     width: 0;
                 }
             }
+
+
         }
     }
 
@@ -539,6 +542,10 @@ main.inner-wrapper {
                     }
                 }
             }
+
+            .details{
+                width: 100%;
+            }
         }
 
         //transition on hover
@@ -606,7 +613,7 @@ main.inner-wrapper {
                 justify-content: flex-end;
                 align-items: stretch;
 
-                button {}
+                // button {}
 
                 .middle-wrapper {
                     display: flex;
