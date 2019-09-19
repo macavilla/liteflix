@@ -63,6 +63,12 @@ h2 {
   line-height: normal;
   letter-spacing: normal;
   color: #ffffff;
+  //prevents line break and wraps in ...
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 85%;
+
 }
 
 .movie-details {
